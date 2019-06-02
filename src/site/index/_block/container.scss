@@ -2,17 +2,18 @@
   position: relative;
   width: 100%;
   height: 100%;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   .main-block__container{
-    position: absolute;
-    top:35%;
-    left:50%;
-    transform: translate(-50%,-50%);
-
+    align-self: center;
+    margin-bottom: 5em;
     .head{
       width: 100%;
       position: relative;
-
+      display: flex;
+      flex-wrap: wrap;
       .head__item{
         display: inline-block;
         padding: 0;
@@ -21,8 +22,12 @@
         border-radius: 15px;
         height: 50px;
         width: 40px;
-        &:nth-child(1n){
-          margin-left: -7px;
+        @media screen and (max-width: 400px)  {
+          &{
+            height: 30px;
+            width: 18px;
+          }
+
         }
         span{
           position: absolute;
@@ -31,7 +36,7 @@
           transform: translateX(-50%);
           font-family: 'Monofett', cursive;
           font-weight: bolder;
-          font-size: 27px;
+          font-size: 25px;
         }
         &.head_bgw{
           background-color: #D3B1B1;
@@ -39,5 +44,51 @@
         }
       }
     }
+
+    .main-inputs{
+      margin-top: 4em;
+      display: flex;
+      flex-direction: column;
+      .inputs-container{
+        .input-item{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          input{
+            width: 100%;
+            padding: 0;
+            border: 0;
+            border-radius: 10px;
+            height: 52px;
+            background-color: #C4C4C4;
+            &::placeholder{
+              padding-left: 1.5em;
+              font-size: 20px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .main-submit{
+      margin-top: 1em;
+      .submit-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .main-submit__btn{
+          height: 40px;
+          width: 100px;
+          border: none;
+          background-color: #C4C4C4;
+          border-radius: 10px;
+          color:#8C4D4D;
+          font-size: 20px;
+        }
+      }
+    }
+
+
   }
 }
