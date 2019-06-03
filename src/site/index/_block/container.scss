@@ -10,10 +10,11 @@
     align-self: center;
     margin-bottom: 5em;
     .head{
-      width: 100%;
       position: relative;
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       .head__item{
         display: inline-block;
         padding: 0;
@@ -24,10 +25,16 @@
         width: 40px;
         @media screen and (max-width: 400px)  {
           &{
-            height: 30px;
-            width: 18px;
+            height: 40px;
+            width: 24px;
           }
 
+        }
+        @media screen and (max-width: 270px)  {
+          &{
+            height: 28px;
+            width: 16px;
+          }
         }
         span{
           position: absolute;
@@ -51,18 +58,27 @@
       flex-direction: column;
       .inputs-container{
         .input-item{
-          width: 100%;
           display: flex;
           flex-direction: column;
+          position: relative;
+          box-sizing: border-box;
           input{
             width: 100%;
             padding: 0;
+            box-sizing: border-box;
             border: 0;
             border-radius: 10px;
             height: 52px;
             background-color: #C4C4C4;
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 1.5em;
+            //padding-right: 1.5em;
+            outline: none;
+            &:hover{
+              outline: none;
+            }
             &::placeholder{
-              padding-left: 1.5em;
               font-size: 20px;
               font-weight: bold;
             }
