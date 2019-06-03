@@ -33,30 +33,31 @@
                     <span>K</span>
                 </div>
             </div>
-
         </div>
-
         <div class="main-inputs">
             <div class="inputs-container">
                 <div class="input-item">
-                    <input type="text" placeholder="Email">
-                    <p>Do you forgot you password?</p>
+                    @@include('./../../default/blocks/inputs/text/default/input.html',{
+                            "placeholder" : "Email"
+                    })
+                    <p><a class="open-modal" data-modal="modal_forgot-password" href="javascript:void(0)">Do you forgot you password?</a></p>
                 </div>
             </div>
             <div class="inputs-container">
                 <div class="input-item">
-                    <input type="password" placeholder="Password">
-                    <p>Don't you have an account?</p>
+                    @@include('./../../default/blocks/inputs/text/default/input.html',{
+                    "placeholder" : "Password"
+                    })
+                    <p><a class="open-modal" data-modal="modal_create-account" href="javascript:void(0)">Don't you have an account?</a></p>
                 </div>
             </div>
         </div>
         <div class="main-submit">
             <div class="submit-container">
-                <button class="main-submit__btn">
-                    Log in
-                </button>
+                @@include('./../../default/blocks/inputs/button/default/button.html',{
+                    "text" : "Log in"
+                })
             </div>
         </div>
-
     </div>
 </main>

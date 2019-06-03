@@ -1,3 +1,51 @@
 @@include('./default/blocks/header/head.html')
 @@include('./index/main.html')
 @@include('./default/blocks/footer/footer.html')
+@@include('./default/blocks/modals/default/modal.html',{
+    "modal" : "modal_forgot-password",
+    "modal_name" : "Reset password",
+    "inputs" : [
+    {
+    "type" : "inputs/text/default/input.html",
+    "placeholder" : "Email",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50"
+    },
+    {
+    "type" : "inputs/button/default/button.html",
+    "text" : "Reset",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
+    ]
+})
+@@include('./default/blocks/modals/default/modal.html',{
+    "modal" : "modal_create-account",
+    "modal_name" : "Create account",
+    "inputs" : [
+{
+"type" : "inputs/text/default/input.html",
+"placeholder" : "Email",
+"addClass" : "input-left mt1",
+"addClassContainer" : "w50"
+},
+{
+"type" : "inputs/text/default/input.html",
+"placeholder" : "Password",
+"addClass" : "input-left mt1",
+"addClassContainer" : "w50"
+},
+{
+"type" : "inputs/text/default/input.html",
+"placeholder" : "Confirm password",
+"addClass" : "input-left mt1",
+"addClassContainer" : "w50"
+},
+{
+"type" : "inputs/button/default/button.html",
+"text" : "Sign Up",
+"addClass" : "button-center mt1",
+"addClassContainer" : "button-center"
+}
+    ]
+})

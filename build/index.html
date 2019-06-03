@@ -45,33 +45,123 @@
                     <span>K</span>
                 </div>
             </div>
-
         </div>
-
         <div class="main-inputs">
             <div class="inputs-container">
                 <div class="input-item">
-                    <input type="text" placeholder="Email">
-                    <p>Do you forgot you password?</p>
+                    <div class="input-container @@addClassContainer">
+    <div class="input-text @@addClass">
+        <input type="text" class="input-text__item" placeholder=Email>
+    </div>
+</div>
+                    <p><a class="open-modal" data-modal="modal_forgot-password" href="javascript:void(0)">Do you forgot you password?</a></p>
                 </div>
             </div>
             <div class="inputs-container">
                 <div class="input-item">
-                    <input type="password" placeholder="Password">
-                    <p>Don't you have an account?</p>
+                    <div class="input-container @@addClassContainer">
+    <div class="input-text @@addClass">
+        <input type="text" class="input-text__item" placeholder=Password>
+    </div>
+</div>
+                    <p><a class="open-modal" data-modal="modal_create-account" href="javascript:void(0)">Don't you have an account?</a></p>
                 </div>
             </div>
         </div>
         <div class="main-submit">
             <div class="submit-container">
-                <button class="main-submit__btn">
-                    Log in
-                </button>
+                <div class="submit-default @@addClassContainer">
+    <button class="submit-default__item @@addClass">
+        Log in
+    </button>
+</div>
+
             </div>
         </div>
-
     </div>
 </main>
 </body>
 <script src="/js/bundle.min.js"></script>
 </html>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<div class="container">
+    <div class="content">
+        <button class="open-modal">Open Modal</button>
+    </div>
+    <div class="modal-overlay modal_forgot-password-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal_forgot-password modal js-blur">
+            <button class="close-modal">×</button>
+            <h2>Reset password</h2>
+            <div class="modal-input-container">
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type="text" class="input-text__item" placeholder=Email>
+    </div>
+</div>
+                
+                    <div class="submit-default button-center">
+    <button class="submit-default__item button-center mt1">
+        Reset
+    </button>
+</div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<div class="container">
+    <div class="content">
+        <button class="open-modal">Open Modal</button>
+    </div>
+    <div class="modal-overlay modal_create-account-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal_create-account modal js-blur">
+            <button class="close-modal">×</button>
+            <h2>Create account</h2>
+            <div class="modal-input-container">
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type="text" class="input-text__item" placeholder=Email>
+    </div>
+</div>
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type="text" class="input-text__item" placeholder=Password>
+    </div>
+</div>
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type="text" class="input-text__item" placeholder=Confirm password>
+    </div>
+</div>
+                
+                    <div class="submit-default button-center">
+    <button class="submit-default__item button-center mt1">
+        Sign Up
+    </button>
+</div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+.submit-default{
+  display: flex;
+  &.button-center{
+    justify-content: center;
+  }
+    button{
+      height: 40px;
+      width: 100px;
+      border: none;
+      background-color: #C4C4C4;
+      border-radius: 10px;
+      color:#8C4D4D;
+      cursor: pointer;
+      font-size: 20px;
+      &:focus{
+        outline: none;
+        opacity: unset;
+      }
+      &:active{
+        background-color: #8C4D4D;
+        color: #C4C4C4;
+      }
+      &:hover{
+        outline:none;
+      }
+      &.button-right{
+
+
+      }
+      &.button-center{
+        align-self: center;
+      }
+    }
+}

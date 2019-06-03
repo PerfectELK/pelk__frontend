@@ -71,16 +71,37 @@
             height: 52px;
             background-color: #C4C4C4;
             font-size: 20px;
-            font-weight: bold;
+            font-weight: normal;
+            font-family: Roboto;
             padding-left: 1.5em;
-            //padding-right: 1.5em;
             outline: none;
             &:hover{
               outline: none;
             }
             &::placeholder{
               font-size: 20px;
-              font-weight: bold;
+              font-family: Roboto;
+              font-style: normal;
+              font-weight: normal;
+              text-indent: 0px;
+              transition: text-indent 300ms;
+            }
+            &:focus{
+              &::placeholder{
+                text-indent: 500px;
+              }
+            }
+          }
+          p{
+            padding-left: 2em;
+            a{
+              text-decoration: none;
+              color:#000000;
+              font-size:17px;
+              &:hover{
+                text-decoration: none;
+
+              }
             }
           }
         }
@@ -100,7 +121,19 @@
           background-color: #C4C4C4;
           border-radius: 10px;
           color:#8C4D4D;
+          cursor: pointer;
           font-size: 20px;
+          &:focus{
+            outline: none;
+            opacity: unset;
+          }
+          &:active{
+            background-color: #8C4D4D;
+            color: #C4C4C4;
+          }
+          &:hover{
+            outline:none;
+          }
         }
       }
     }
