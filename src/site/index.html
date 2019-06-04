@@ -4,13 +4,15 @@
 @@include('./default/blocks/modals/default/modal.html',{
     "modal" : "modal_forgot-password",
     "modal_name" : "Reset password",
+    "action" : "reset-password",
     "inputs" : [
     {
     "src" : "inputs/text/default/input.html",
     "placeholder" : "Email",
     "addClass" : "input-left mt1",
     "addClassContainer" : "w50",
-    "type" : "email"
+    "type" : "email",
+    "validateCls" : "validate[required, custom[email]] "
     },
     {
     "src" : "inputs/button/default/button.html",
@@ -23,33 +25,37 @@
 @@include('./default/blocks/modals/default/modal.html',{
     "modal" : "modal_create-account",
     "modal_name" : "Create account",
+    "action" : "create-account",
     "inputs" : [
-{
-"src" : "inputs/text/default/input.html",
-"placeholder" : "Email",
-"addClass" : "input-left mt1",
-"addClassContainer" : "w50",
-"type" : "email"
-},
-{
-"src" : "inputs/text/default/input.html",
-"placeholder" : "Password",
-"addClass" : "input-left mt1",
-"addClassContainer" : "w50",
-"type" : "password"
-},
-{
-"src" : "inputs/text/default/input.html",
-"placeholder" : "Confirm password",
-"addClass" : "input-left mt1",
-"addClassContainer" : "w50",
-"type" : "password"
-},
-{
-"src" : "inputs/button/default/button.html",
-"text" : "Sign Up",
-"addClass" : "button-center mt1",
-"addClassContainer" : "button-center"
-}
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Email",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "email",
+    "validateCls" : "validate[required, custom[email]]"
+    },
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Password",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "password",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Confirm password",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "password",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/button/default/button.html",
+    "text" : "Sign Up",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
     ]
 })
