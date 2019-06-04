@@ -16,11 +16,12 @@
             <h2>@@modal_name</h2>
             <div class="modal-input-container">
                 @@for(var i = 0; i < inputs.length; i++){
-                    @@include('../../`+inputs[i].type+`',{
+                    @@include('../../`+inputs[i].src+`',{
                         "placeholder" : "`+inputs[i].placeholder+`",
                         "text" : "`+inputs[i].text+`",
                         "addClass" : "`+inputs[i].addClass+`",
-                        "addClassContainer" : "`+inputs[i].addClassContainer+`"
+                        "addClassContainer" : "`+inputs[i].addClassContainer+`",
+                        "type" : "`+inputs[i].type+`"
                         })
                 }
             </div>
