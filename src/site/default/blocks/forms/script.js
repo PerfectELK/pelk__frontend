@@ -1,6 +1,9 @@
 $(document).ready(function () {
 
-    $('.form__validation').validationEngine();
+    $('.form__validation').validationEngine('attach', {
+        promptPosition : "topLeft",
+        scroll: false
+    });
 
     $(".form__validation")
         .on('submit', function (event) {
