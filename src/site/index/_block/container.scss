@@ -15,39 +15,19 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      .head__item{
-        display: inline-block;
-        padding: 0;
-        position: relative;
+      .head__text{
+        font-family: 'Monofett';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 90px;
+        color:#D3B1B1;
+        line-height: 102px;
         margin: 0;
-        border-radius: 15px;
-        height: 50px;
-        width: 40px;
-        @media screen and (max-width: 400px)  {
-          &{
-            height: 40px;
-            width: 24px;
-          }
-
+        @media screen and(max-width: 600px){
+          font-size: 60px;
         }
-        @media screen and (max-width: 270px)  {
-          &{
-            height: 28px;
-            width: 16px;
-          }
-        }
-        span{
-          position: absolute;
-          left: 50%;
-          top:0;
-          transform: translateX(-50%);
-          font-family: 'Monofett', cursive;
-          font-weight: bolder;
-          font-size: 25px;
-        }
-        &.head_bgw{
-          background-color: #D3B1B1;
-          color:#000000;
+        @media screen and(max-width: 400px){
+          font-size: 40px;
         }
       }
     }
