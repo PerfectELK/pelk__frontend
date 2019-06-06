@@ -41,6 +41,7 @@
 
       @media screen and (max-width: 770px){
         position: absolute;
+        z-index: 1000;
         height: calc(100% - 80px);
         width:100%;
         top:80px;
