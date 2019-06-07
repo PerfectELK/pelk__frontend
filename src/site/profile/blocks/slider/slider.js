@@ -3447,8 +3447,8 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-
-$('.owl-slider').owlCarousel({
+var owl = $('.owl-slider');
+ owl.owlCarousel({
     nav:true,
     loop:true,
     responsive:{
@@ -3467,6 +3467,14 @@ $('.owl-slider').owlCarousel({
     dots:false,
     autoWidth: false,
     });
+
+$('.owl-item').click(function() {
+    if(!$(this).hasClass('center')){
+        n = $(this).index();
+        owl.trigger('to.owl.carousel', n);
+    }
+})
+
 
 $('.owl-prev').find('span').html('');
 $('.owl-next').find('span').html('');
