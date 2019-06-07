@@ -3447,33 +3447,88 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-var owl = $('.owl-slider');
- owl.owlCarousel({
-    nav:true,
-    loop:true,
-    responsive:{
-        0:{
-          items:1
-        },
-        600:{
-          items:3
-        },
-        1000:{
-            items:5
-        }
-    },
-    center:true,
-    navElement:'slider__arrow__wrapper',
-    dots:false,
-    autoWidth: false,
-    });
-
-$('.owl-item').click(function() {
-    if(!$(this).hasClass('center')){
-        n = $(this).index();
-        owl.trigger('to.owl.carousel', n);
+function initCarousel(){
+    var owl = $('.owl-slider');
+    if($('.slider-block').hasClass('slider-block_opened')){
+        var responsive = {
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            800:{
+                items:3
+            },
+            1000:{
+                items:3
+            },
+            1200:{
+                items:5
+            }
+        };
+    }else{
+        var responsive = {
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            },
+            1200:{
+                items:5
+            }
+        };
     }
-})
+
+    var config = {
+        nav:true,
+        loop:true,
+        responsive:responsive,
+        center:true,
+        navElement:'slider__arrow__wrapper',
+        dots:false,
+        autoWidth: false,
+    }
+    owl.owlCarousel(config);
+
+    function getNumber(current, target){
+        return (target > current) ? target + 2 : target - 3;
+    }
+
+
+    owl.on('click','.owl-item', function(){
+        if(!$(this).hasClass('center')){
+            var current = $('.owl-item.center').index();
+            var n = $(this).index();
+            var ww = window.innerWidth;
+            var prevent__num = false;
+            var index = 0;
+            for(var num in responsive){
+                if(prevent__num){
+                    if(ww >= prevent__num && ww <= num){
+                        var index = prevent__num;
+                        break;
+                    }else if(ww <= prevent__num && ww >= num){
+                        var index = num;
+                        break;
+                    }
+                }
+                prevent__num = num;
+            }
+            if(responsive[index].items <= 3 && $('.owl-item.active').length < 5){
+                n = getNumber(current, n);
+            }
+            owl.trigger('to.owl.carousel',[n]);
+        }
+    })
+}
+
+initCarousel();
+
 
 
 $('.owl-prev').find('span').html('');
