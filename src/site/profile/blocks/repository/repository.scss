@@ -1,17 +1,19 @@
 *{
   box-sizing: border-box;
 }
+
+.category_hidden{
+
+  transition: all 0.8s ease;
+}
+
+
 .repository-block{
   margin-top: 1em;
   margin-bottom: 1em;
-  transition: height,margin 0.8s ease;
-
-  &.repository-block_hidden{
-    height: 0;
-    overflow: hidden;
-    margin: 0;
-  }
-
+  transition: all 0.8s ease;
+  position: relative;
+  left: auto;
   .repository-block__wrapper{
     .table{
       display: flex;
