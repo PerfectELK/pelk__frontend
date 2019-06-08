@@ -3528,9 +3528,16 @@ $(document).on('click','.owl-item', function(){
             open = slide.data('open'),
             category = slide.data('category');
 
+
         if(open == 0){
-            slide.data('open',1);
-            openCategory(category);
+            if(findOpenCategory()){
+                hideAllCategory();
+                slide.data('open',1);
+                openCategory(category);
+            }else{
+                slide.data('open',1);
+                openCategory(category);
+            }
         }else{
             slide.data('open',0);
             closeCategory(category)
@@ -3539,23 +3546,46 @@ $(document).on('click','.owl-item', function(){
     }
 })
 
+function findOpenCategory(){
+    var searched = false;
+    $('.slider__item').each(function(index, item){
+        if($(item).data('open') == 1) searched = true
+    });
+    return searched;
+}
+
 function getNumber(current, target){
     return (target > current) ? target + 2 : target - 3;
 }
 
 function getCategory(cat){
-    $('.category').each(function(index,item){
-       var it = $(item);
-       if(it.data('category') == cat){
-            it.removeClass('category_hidden');
-       }
+    $('.category').each(function (index, item) {
+        var it = $(item);
+        if (it.data('category') == cat) {
+            it.removeClass('dn');
+            setTimeout(function(){
+                it.removeClass('category_hidden');
+                setTimeout(function () {
+                    it.removeClass('pa');
+                }, 50)
+            },50);
+        }
     });
 }
 
 function hideAllCategory() {
+    $('.slider__item').each(function(index, item){
+        $(item).data('open',0);
+    });
     $('.category').each(function(index,item){
         var it = $(item);
-        it.addClass('category_hidden');
+        it.addClass('pa');
+        setTimeout(function(){
+            it.addClass('category_hidden');
+            setTimeout(function(){
+                it.addClass('dn')
+            },200)
+        },100);
     })
 }
 
@@ -3566,6 +3596,7 @@ function openCategory(categoryName){
         $('.slider__item').addClass('slider__item_up');
         setTimeout(function(){
             $('.owl-stage').addClass('owl-auto');
+            owl.trigger('refresh.owl.carousel');
             getCategory(categoryName);
         },100);
     },300);
@@ -3580,6 +3611,7 @@ function closeCategory(categoryName){
         $('.slider__item').removeClass('slider__item_up');
         setTimeout(function(){
             $('.owl-stage').removeClass('owl-auto');
+            owl.trigger('refresh.owl.carousel');
             hideAllCategory();
         },100);
     },300)
