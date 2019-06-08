@@ -1,7 +1,5 @@
 .profile-main {
-  //margin-top: 5em;
   .profile-main__wrapper {
-    //margin-top: 5em;
     padding-left: 5em;
     padding-right: 5em;
 
@@ -18,7 +16,8 @@
           height: auto;
         .owl-item {
           .slider__item-wrapper {
-            .slider__item {
+            .slider__item_up {
+              transition: all 0.5s ease;
               width: 200px !important;
               min-width: 200px !important;
               height: 200px !important;
@@ -78,9 +77,6 @@
   }
 }
 
-//.slider__item-wrapper{
-//  display: inline-block;
-//}
 
 .owl-item {
   display: inline-block;
@@ -177,17 +173,6 @@
       transform: rotate(45deg);
       margin-right: 0.5em;
     }
-
-    //&::before {
-    //  top: 25%;
-    //  right: 0;
-    //  transform: rotate(45deg);
-    //}
-    //&::after {
-    //  top: 60%;
-    //  right: 0;
-    //  transform: rotate(-45deg);
-    //}
   }
 }
 
@@ -196,6 +181,7 @@
   justify-content: center;
   align-items: center;
   height: 459px;
+  transition: height 0.5s ease;
 
   .owl-item{
     cursor: pointer;

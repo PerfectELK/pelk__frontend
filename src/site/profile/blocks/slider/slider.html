@@ -1,24 +1,24 @@
 <main class="profile-main">
     <div class="profile-main__wrapper">
-        <div class="slider-block slider-block_opened">
+        <div class="slider-block">
             <div class="slider-block__wrapper">
                 <div class="slider__wrapper">
                 <div class="slider owl-slider owl-theme">
 
-                    @@for(var i = 0; i < 2; i++){
+                    @@for(var i = 0; i < 3; i++){
                     @@include('./slider__item/slider__item.html',{
                             "icon" : "icons8-keepass_(1)",
                             "text" : "BOOK"
                     })
                     }
-                    <div class="slider__item-wrapper">
-                        <div class="slider__item">
-                            <svg class="svg-icon">
-                                <use xlink:href="./img/svg/sprite.svg#Tilda_Icons_1ed_book"></use>
-                            </svg>
-                        </div>
-                        <h3 class="tc">BOOK</h3>
-                    </div>
+                    <!--<div class="slider__item-wrapper">-->
+                        <!--<div class="slider__item">-->
+                            <!--<svg class="svg-icon">-->
+                                <!--<use xlink:href="./img/svg/sprite.svg#Tilda_Icons_1ed_book"></use>-->
+                            <!--</svg>-->
+                        <!--</div>-->
+                        <!--<h3 class="tc">BOOK</h3>-->
+                    <!--</div>-->
 
 
                     @@for(var i = 0; i < 2; i++){

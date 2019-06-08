@@ -3446,11 +3446,10 @@
     }
 
 })(window.Zepto || window.jQuery, window, document);
-
+var responsive = {};
 function initCarousel(){
-    var owl = $('.owl-slider');
     if($('.slider-block').hasClass('slider-block_opened')){
-        var responsive = {
+        responsive = {
             0:{
                 items:1
             },
@@ -3468,7 +3467,7 @@ function initCarousel(){
             }
         };
     }else{
-        var responsive = {
+        responsive = {
             0:{
                 items:1
             },
@@ -3499,32 +3498,67 @@ function initCarousel(){
         return (target > current) ? target + 2 : target - 3;
     }
 
+}
 
-    owl.on('click','.owl-item', function(){
-        if(!$(this).hasClass('center')){
-            var current = $('.owl-item.center').index();
-            var n = $(this).index();
-            var ww = window.innerWidth;
-            var prevent__num = false;
-            var index = 0;
-            for(var num in responsive){
-                if(prevent__num){
-                    if(ww >= prevent__num && ww <= num){
-                        var index = prevent__num;
-                        break;
-                    }else if(ww <= prevent__num && ww >= num){
-                        var index = num;
-                        break;
-                    }
+var owl = $('.owl-slider');
+$(document).on('click','.owl-item', function(){
+    if(!$(this).hasClass('center')){
+        var current = $('.owl-item.center').index();
+        var n = $(this).index();
+        var ww = window.innerWidth;
+        var prevent__num = false;
+        var index = 0;
+        for(var num in responsive){
+            if(prevent__num){
+                if(ww >= prevent__num && ww <= num){
+                    var index = prevent__num;
+                    break;
+                }else if(ww <= prevent__num && ww >= num){
+                    var index = num;
+                    break;
                 }
-                prevent__num = num;
             }
-            if(responsive[index].items <= 3 && $('.owl-item.active').length < 5){
-                n = getNumber(current, n);
-            }
-            owl.trigger('to.owl.carousel',[n]);
+            prevent__num = num;
         }
-    })
+        if(responsive[index].items <= 3 && $('.owl-item.active').length < 5){
+            n = getNumber(current, n);
+        }
+        owl.trigger('to.owl.carousel',[n]);
+    }else if($(this).hasClass('center')){
+
+        var slide = $(this).find('.slider__item'),
+            open = slide.data('open'),
+            category = slide.data('category');
+
+        if(open == 0){
+            slide.data('open',1);
+            openCategory(category);
+        }else{
+            slide.data('open',0);
+            closeCategory(category)
+        }
+        initCarousel();
+    }
+})
+
+
+function openCategory(categoryName){
+    $('.slider-block').addClass('slider-block_opened');
+
+    // setTimeout(function(){
+    //     $('.slider__item').addClass('slider__item_up');
+    // },500);
+
+}
+
+
+function closeCategory(categoryName){
+    $('.slider-block').removeClass('slider-block_opened');
+
+    // setTimeout(function(){
+    //     $('.slider__item').removeClass('slider__item_up');
+    // },500)
+
 }
 
 initCarousel();

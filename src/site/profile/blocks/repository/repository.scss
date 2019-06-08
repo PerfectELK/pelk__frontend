@@ -4,6 +4,14 @@
 .repository-block{
   margin-top: 1em;
   margin-bottom: 1em;
+  transition: height,margin 0.8s ease;
+
+  &.repository-block_hidden{
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+  }
+
   .repository-block__wrapper{
     .table{
       display: flex;
