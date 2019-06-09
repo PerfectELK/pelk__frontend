@@ -1,24 +1,14 @@
-<section class="category repository-block category_hidden" data-category="repository">
-    <div class="repository-block__wrapper">
-        <div class="table">
-            <div class="table__wrapper">
-                <table class="table-item table-item_responsive">
-                    <thead>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Change/Delete</th>
-                    </thead>
-                    <tbody>
-                    @@for(var i = 0; i < 5; i++){
-                    <tr>
-                        <td>Python</td>
-                        <td>Язык</td>
-                        <td>del</td>
-                    </tr>
-                    }
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+<section class="category category-block category_hidden dn" data-category="repository">
+    @@include('../../../default/blocks/table/table.html',{
+    "head" : [
+    "Name",
+    "Description",
+    "Change/Delete"
+    ],
+    "body" : [
+    "Статьи про веб",
+    "Нужно прочитать",
+    "Change/Delete icons"
+    ]
+    })
 </section>
