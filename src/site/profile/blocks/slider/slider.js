@@ -3446,6 +3446,8 @@
     }
 
 })(window.Zepto || window.jQuery, window, document);
+
+
 var responsive = {};
 function initCarousel(){
     if($('.slider-block').hasClass('slider-block_opened')){
@@ -3463,7 +3465,7 @@ function initCarousel(){
                 items:3
             },
             1200:{
-                items:5
+                items:3
             }
         };
     }else{
@@ -3475,27 +3477,35 @@ function initCarousel(){
                 items:3
             },
             1000:{
-                items:5
+                items:3
             },
             1200:{
                 items:5
             }
         };
     }
+    try{
+        var conf__items = JSON.parse(owl.data('config'));
+    }catch (e) {
+        var conf__items = {};
+    }
 
     var config = {
-        nav:true,
-        loop:true,
+        nav:(conf__items.nav != undefined) ? conf__items.nav : true,
+        loop:(conf__items.loop != undefined) ? conf__items.loop : true,
         responsive:responsive,
-        center:true,
-        navElement:'slider__arrow__wrapper',
-        dots:false,
-        autoWidth: false,
+        center:(conf__items.center != undefined) ? conf__items.center : true,
+        navElement:(conf__items.navElement != undefined) ? conf__items.navElement : "slider__arrow__wrapper",
+        dots:(conf__items.dots != undefined) ? conf__items.dots : false,
+        autoWidth: (conf__items.autoWidth != undefined) ? conf__items.autoWidth : false,
+        freeDrag: true,
     }
+
     owl.owlCarousel(config);
 
-
-
+    if(!config.nav){
+        $('.disabled').css({'display':'none'});
+    }
 }
 
 var owl = $('.owl-slider');
@@ -3524,27 +3534,40 @@ $(document).on('click','.owl-item', function(){
         owl.trigger('to.owl.carousel',[n]);
     }else if($(this).hasClass('center')){
 
-        var slide = $(this).find('.slider__item'),
-            open = slide.data('open'),
-            category = slide.data('category');
+        var slide = $(this).find('.slider__item');
+        var func__name = 'open__or__close' + slide.data('activated');
 
+        window[func__name](slide);
 
-        if(open == 0){
-            if(findOpenCategory()){
-                hideAllCategory();
-                slide.data('open',1);
-                openCategory(category);
-            }else{
-                slide.data('open',1);
-                openCategory(category);
-            }
-        }else{
-            slide.data('open',0);
-            closeCategory(category)
-        }
-        initCarousel();
     }
 })
+
+
+function open__or__closeTimer(item){
+    console.log('kek');
+}
+
+function open__or__closeProfile(item){
+
+    var slide = item,
+        open = slide.data('open'),
+        category = slide.data('category');
+
+    if(open == 0){
+        if(findOpenCategory()){
+            hideAllCategory();
+            slide.data('open',1);
+            openCategory(category);
+        }else{
+            slide.data('open',1);
+            openCategory(category);
+        }
+    }else{
+        slide.data('open',0);
+        closeCategory(category)
+    }
+    initCarousel();
+}
 
 function findOpenCategory(){
     var searched = false;

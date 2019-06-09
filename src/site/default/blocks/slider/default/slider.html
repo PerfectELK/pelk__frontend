@@ -1,0 +1,27 @@
+<div class="slider-block">
+    <div class="slider-block__wrapper">
+        <div class="slider__wrapper">
+            <div class="slider owl-slider owl-theme" data-config='["{\"nav\": false, \"loop\": true, \"center\": true, \"dots\": false, \"autoWidth\": false, \"navElement\" : \" \" }"]'>
+
+                @@for(var i = 0; i < 3; i++){
+                @@include('./item/item.html',{
+                "icon" : "icons8-keepass_(1)",
+                "text" : "BOOK",
+                "category" : "books",
+                "activated" : " Timer"
+                })
+                }
+
+                @@for(var i = 0; i < 2; i++){
+                @@include('./item/item.html',{
+                "icon" : "two-links",
+                "text" : "BOOK",
+                "category" : "repository",
+                "activated" : " Timer"
+                })
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
