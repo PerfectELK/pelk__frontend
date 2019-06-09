@@ -5,7 +5,11 @@
         icon.addEventListener('click', function(event){
             icon.classList.toggle("open");
             menu.classList.toggle("active");
-
+            if(menu.classList.contains('active')){
+                document.body.style['overflow-y'] = 'hidden';
+            }else{
+                document.body.style['overflow-y'] = 'auto';
+            }
         });
     });
 }(jQuery));

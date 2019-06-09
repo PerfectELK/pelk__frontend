@@ -3490,6 +3490,11 @@ function initCarousel(){
         var conf__items = {};
     }
 
+    var r = owl.data('responsive');
+    if(r != undefined){
+        responsive = r
+    }
+
     var config = {
         nav:(conf__items.nav != undefined) ? conf__items.nav : true,
         loop:(conf__items.loop != undefined) ? conf__items.loop : true,
@@ -3498,7 +3503,6 @@ function initCarousel(){
         navElement:(conf__items.navElement != undefined) ? conf__items.navElement : "slider__arrow__wrapper",
         dots:(conf__items.dots != undefined) ? conf__items.dots : false,
         autoWidth: (conf__items.autoWidth != undefined) ? conf__items.autoWidth : false,
-        freeDrag: true,
     }
 
     owl.owlCarousel(config);
@@ -3625,6 +3629,7 @@ function openCategory(categoryName){
     },300);
 
 }
+
 
 
 function closeCategory(categoryName){
