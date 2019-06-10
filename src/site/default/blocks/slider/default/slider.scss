@@ -1,12 +1,11 @@
 .slider-block {
   margin-top: 20vh;
-  transition: margin-top ease 0.5s;
+  transition: all ease .5s;
   &.slider-block_opened {
-    max-width: calc(100vw - 500px);
     @media screen and(max-width: 1200px) {
       max-width:100%;
     }
-    margin: 4em auto 0 auto;
+
   }
   .slider-block__wrapper {
     position: relative;
