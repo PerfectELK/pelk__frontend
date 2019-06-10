@@ -1,11 +1,17 @@
 .slider-block {
-  margin-top: 20vh;
+  margin-top: 15vh;
   transition: all ease .5s;
+  max-width: 100%;
   &.slider-block_opened {
     @media screen and(max-width: 1200px) {
       max-width:100%;
     }
+    margin-top: 0;
 
+  }
+  &.delay__width{
+    transform: scale(.8);
+    margin-top: 4em;
   }
   .slider-block__wrapper {
     position: relative;
@@ -79,7 +85,7 @@
 }
 
 .owl-item.center{
-  width: 400px!important;
+  //width: 400px!important;
   .slider__item-wrapper {
     .slider__item {
       width: 400px!important;

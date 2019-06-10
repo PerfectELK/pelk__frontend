@@ -3,10 +3,10 @@
 }
 
 .category_hidden{
-  left:-4000px!important;
+  left:-200%!important;
 }
 .pa{
-  position: absolute!important;
+  //position: absolute!important;
 }
 
 .dn{
@@ -19,7 +19,7 @@
   margin-bottom: 1em;
   position: relative;
   left:0;
-  transition: left 0.6s ease;
+  transition: all .5s ease;
   .repository-block__wrapper{
     .table{
       display: flex;
