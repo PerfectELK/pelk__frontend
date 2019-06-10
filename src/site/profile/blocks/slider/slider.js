@@ -3609,7 +3609,7 @@ function getCategory(cat){
         $('.slider-block').addClass('slider-block_opened');
         $('.slider-block').addClass('delay__width');
         setTimeout(function () {
-            owl.trigger('refresh.owl.carousel');
+            //owl.trigger('refresh.owl.carousel');
             document.body.style.overflowY = 'auto';
             $('html').css({'overflow-y':'auto'});
         },500);
@@ -3637,7 +3637,7 @@ function hideAllCategory() {
     })
     setTimeout(function(){
         setTimeout(function () {
-            owl.trigger('refresh.owl.carousel');
+            //owl.trigger('refresh.owl.carousel');
             document.body.style.overflowY = 'auto';
             $('html').css({'overflow-y':'auto'});
         },600);
