@@ -3,21 +3,12 @@
         <div class="slider__wrapper">
             <div class="slider owl-slider owl-theme" data-config='["{\"nav\": false, \"loop\": true, \"center\": true, \"dots\": false, \"autoWidth\": false, \"navElement\" : \" \" }"]' data-responsive='{"0": {"items": 1}, "600": {"items": 1}, "800": {"items": 3}, "1000": {"items": 3}, "1200": {"items": 3}}'>
 
-                @@for(var i = 0; i < 3; i++){
+                @@for(var i = 0; i < categories.length; i++){
                 @@include('./item/item.html',{
-                "icon" : "icons8-keepass_(1)",
+                "icon" : "timer",
                 "text" : "BOOK",
-                "category" : "books",
-                "activated" : "Profile"
-                })
-                }
-
-                @@for(var i = 0; i < 2; i++){
-                @@include('./item/item.html',{
-                "icon" : "two-links",
-                "text" : "BOOK",
-                "category" : "repository",
-                "activated" : "Profile"
+                "category" : "`+categories[i]+`",
+                "activated" : "`+activated+`"
                 })
                 }
 

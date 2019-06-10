@@ -3532,7 +3532,8 @@ $(document).on('click','.owl-item', function(){
             }
             prevent__num = num;
         }
-        if(responsive[index].items <= 3 && $('.owl-item.active').length < 5){
+        if(responsive[index].items <= 3 && $('.owl-item.active').length < 5 && $('.owl-item:not(.cloned)').length >= 5){
+            console.log('kek');
             n = getNumber(current, n);
         }
         owl.trigger('to.owl.carousel',[n]);

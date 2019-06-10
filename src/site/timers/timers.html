@@ -1,3 +1,9 @@
 <main class="timers-main">
 @@include("./blocks/slide/slide.html")
 </main>
+
+@@for(var i = 0; i < 3; i++){
+@@include("./blocks/timer-item/timer-item.html",{
+    "category" : "`+ ["timer","timer2","timer3"][i] +`"
+})
+}
