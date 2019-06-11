@@ -181,7 +181,7 @@
 </div>
 
         <div class="submit-default b-h50 b-w100 open-modalContainer">
-    <button class="submit-default__item b-h50 b-w100 open-modal "    data-modal=modal_timer-item__add >
+    <button class="submit-default__item b-h50 b-w100 open-modal "    data-modal=modal_timer-item__change >
         Change
     </button>
 </div>
@@ -283,7 +283,7 @@
 </div>
 
         <div class="submit-default b-h50 b-w100 open-modalContainer">
-    <button class="submit-default__item b-h50 b-w100 open-modal "    data-modal=modal_timer-item__add >
+    <button class="submit-default__item b-h50 b-w100 open-modal "    data-modal=modal_timer-item__change >
         Change
     </button>
 </div>
@@ -385,7 +385,7 @@
 </div>
 
         <div class="submit-default b-h50 b-w100 open-modalContainer">
-    <button class="submit-default__item b-h50 b-w100 open-modal "    data-modal=modal_timer-item__add >
+    <button class="submit-default__item b-h50 b-w100 open-modal "    data-modal=modal_timer-item__change >
         Change
     </button>
 </div>
@@ -437,6 +437,58 @@
                     <div class="submit-default button-center">
     <button class="submit-default__item button-center mt1 " >
         Add
+    </button>
+</div>
+
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<div class="container">
+    <div class="modal-overlay modal_timer-item__change-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal_timer-item__change modal js-blur">
+            <button class="close-modal">×</button>
+            <h2>Change item</h2>
+            <div class="modal-input-container">
+                <form class="form__validation" action=timer-item__change method="get">
+                
+                    <div class="input-container w50">
+    <div class="input-select input-left mt1">
+        <select  class="picture-select input-select__item validate[required]" placeholder=Icon >
+            <option class="icon" title="http://localhost:3000/img/temp/icon-timer_1.png"  value="1">Отжимания 1</option>
+            <option class="icon" title="http://localhost:3000/img/temp/icon-timer_1.png" value="2">Отжимания 2</option>
+            <option class="icon" title="http://localhost:3000/img/temp/icon-timer_1.png" value="3">Отжимания 3</option>
+        </select>
+    </div>
+</div>
+
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type=text class="input-text__item validate[required] " placeholder=Name>
+    </div>
+</div>
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type=text class="input-text__item validate[required]" placeholder=Time>
+    </div>
+</div>
+                
+                    <div class="submit-default button-center">
+    <button class="submit-default__item button-center mt1 " >
+        Change
     </button>
 </div>
 

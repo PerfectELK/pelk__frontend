@@ -45,3 +45,41 @@
     }
     ]
 })
+
+@@include("./../default/blocks/modals/default/modal.html",{
+    "modal" : "modal_timer-item__change",
+    "modal_name" : "Change item",
+    "action" : "timer-item__change",
+    "inputs" : [
+    {
+    "src" : "inputs/select/picture/select.html",
+    "placeholder" : "Icon",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "email",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Name",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required] "
+    },
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Time",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/button/default/button.html",
+    "text" : "Change",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
+    ]
+})
