@@ -23,6 +23,14 @@ html, body {
 .tc{
   text-align: center;
 }
+button{
+  &.b-w100{
+    width: 160px!important;
+  }
+  &.b-h50{
+    height: 50px!important;
+  }
+}
 
 
 @import "fonts";

@@ -7,3 +7,41 @@
     "category" : "`+ ["timer","timer2","timer3"][i] +`"
 })
 }
+
+@@include("./../default/blocks/modals/default/modal.html",{
+    "modal" : "modal_timer-item__add",
+    "modal_name" : "Add Item",
+    "action" : "timer-item__add",
+    "inputs" : [
+    {
+    "src" : "inputs/select/picture/select.html",
+    "placeholder" : "Icon",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "email",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Name",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required] "
+    },
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Time",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/button/default/button.html",
+    "text" : "Add",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
+    ]
+})

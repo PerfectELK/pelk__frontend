@@ -1,4 +1,7 @@
 <section class="category category-block category_hidden dn" data-category=@@category>
+    <div class="category__wrapper">
+
+
     @@include("./../../../default/blocks/table/timer_table/table.html",{
     "head" : [
     "Name",
@@ -9,4 +12,17 @@
     "2:45"
     ]
     })
+    <div class="button-container">
+        @@include("./../../../default/blocks/inputs/button/default/button.html",{
+            "text" : "Add",
+            "addClass" : "b-h50 b-w100 open-modal",
+            "data_modal" : "modal_timer-item__add"
+        })
+        @@include("./../../../default/blocks/inputs/button/default/button.html",{
+            "text" : "Change",
+            "addClass" : "b-h50 b-w100 open-modal",
+            "data_modal" : "modal_timer-item__add"
+            })
+    </div>
+    </div>
 </section>
