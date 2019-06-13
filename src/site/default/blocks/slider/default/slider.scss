@@ -22,6 +22,7 @@
         display: block;
 
         .slider__item-wrapper {
+          position: relative;
           display: inline-block;
           flex-direction: column;
           align-self: center;

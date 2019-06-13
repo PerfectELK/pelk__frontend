@@ -1,5 +1,8 @@
 <main class="timers-main">
-@@include("./blocks/slide/slide.html")
+    <div class="add-item">
+        @@include("./../default/blocks/plus/default/plus.html")
+    </div>
+    @@include("./blocks/slide/slide.html")
 </main>
 
 @@for(var i = 0; i < 3; i++){
@@ -83,3 +86,17 @@
     }
     ]
 })
+
+    @@include("./../default/blocks/modals/default/modal.html",{
+    "modal" : "modal_timer__delete",
+    "modal_name" : "Delete timer",
+    "action" : "timer-delete",
+    "inputs" : [
+    {
+    "src" : "inputs/button/default/button.html",
+    "text" : "Delete",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
+    ]
+});

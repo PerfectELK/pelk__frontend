@@ -1,0 +1,19 @@
+
+.delete-block{
+  position: absolute;
+  top:0;
+  right: 0;
+  .delete-block__wrapper{
+    .delete-item{
+      width:70px;
+      height: 70px;
+      max-width: 70px;
+      max-height: 70px;
+      position: relative;
+      z-index: 1000;
+      svg{
+        fill:#d3b1b1;
+      }
+    }
+  }
+}

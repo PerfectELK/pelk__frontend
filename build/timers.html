@@ -42,7 +42,18 @@
     </div>
 </nav>
 <main class="timers-main">
-<div class="timers-main__wrapper">
+    <div class="add-item">
+        <div class="plus-block">
+    <div class="plus-block__wrapper">
+        <div class="plus-block__elem">
+            <svg class="svg-icon">
+                <use xlink:href="/img/svg/sprite.svg#plus"></use>
+            </svg>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="timers-main__wrapper">
     <div class="slider-block">
     <div class="slider-block__wrapper">
         <div class="slider__wrapper">
@@ -50,6 +61,15 @@
 
                 
                 <div class="slider__item-wrapper">
+    <div class="delete-block">
+    <div class="delete-block__wrapper">
+        <div class="delete-item open-modal"  data-modal="modal_timer__delete">
+            <svg class="svg-icon">
+                <use xlink:href="/img/svg/sprite.svg#delete"></use>
+            </svg>
+        </div>
+    </div>
+</div>
     <div class="slider__item @@additionClass " data-activated=Profile data-category=timer data-open="0">
         <svg class="svg-icon">
             <use xlink:href="./img/svg/sprite.svg#timer"></use>
@@ -60,6 +80,15 @@
 
                 
                 <div class="slider__item-wrapper">
+    <div class="delete-block">
+    <div class="delete-block__wrapper">
+        <div class="delete-item open-modal"  data-modal="modal_timer__delete">
+            <svg class="svg-icon">
+                <use xlink:href="/img/svg/sprite.svg#delete"></use>
+            </svg>
+        </div>
+    </div>
+</div>
     <div class="slider__item @@additionClass " data-activated=Profile data-category=timer2 data-open="0">
         <svg class="svg-icon">
             <use xlink:href="./img/svg/sprite.svg#timer"></use>
@@ -70,6 +99,15 @@
 
                 
                 <div class="slider__item-wrapper">
+    <div class="delete-block">
+    <div class="delete-block__wrapper">
+        <div class="delete-item open-modal"  data-modal="modal_timer__delete">
+            <svg class="svg-icon">
+                <use xlink:href="/img/svg/sprite.svg#delete"></use>
+            </svg>
+        </div>
+    </div>
+</div>
     <div class="slider__item @@additionClass " data-activated=Profile data-category=timer3 data-open="0">
         <svg class="svg-icon">
             <use xlink:href="./img/svg/sprite.svg#timer"></use>
@@ -498,6 +536,35 @@
         </div>
     </div>
 </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<div class="container">
+    <div class="modal-overlay modal_timer__delete-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal_timer__delete modal js-blur">
+            <button class="close-modal">×</button>
+            <h2>Delete timer</h2>
+            <div class="modal-input-container">
+                <form class="form__validation" action=timer-delete method="get">
+                
+                    <div class="submit-default button-center">
+    <button class="submit-default__item button-center mt1 " >
+        Delete
+    </button>
+</div>
+
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>;
 </body>
 <script src="/js/bundle.min.js"></script>
 </html>

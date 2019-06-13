@@ -3513,7 +3513,7 @@ function initCarousel(){
 }
 
 var owl = $('.owl-slider');
-$(document).on('click','.owl-item', function(){
+$(document).on('click','.owl-item', function(e){
     if(!$(this).hasClass('center')){
         var current = $('.owl-item.center').index();
         var n = $(this).index();

@@ -1,0 +1,50 @@
+.add-item{
+  position: absolute;
+  left: 5%;
+  top:10%;
+  .plus-block{
+    .plus-block__wrapper{
+      position: absolute;
+      animation: plusWrapperAnimate 4s infinite;
+      .plus-block__elem{
+        max-height: 100px;
+        max-width: 100px;
+        width:100px;
+        animation: plusAnimate 8s infinite;
+        height: 100px;
+        svg{
+          fill: #d3b1b1 !important;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@keyframes plusAnimate {
+  0%{
+    transform: none;
+
+  }
+  50%{
+    transform: perspective(100px) scale(0.5);
+  }
+  100%{
+    transform: none;
+  }
+}
+
+@keyframes plusWrapperAnimate {
+  0%{
+    left:0;
+    transform: rotate(0);
+  }
+  50%{
+    left:150px;
+    transform: rotate(360deg);
+  }
+  100%{
+    left:0;
+    transform: rotate(0);
+  }
+}

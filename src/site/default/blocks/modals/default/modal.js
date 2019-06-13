@@ -156,8 +156,8 @@ $(document).ready(function() {
     function unblock(){
         blocked=false;
     }
-    $(".open-modal").click(function() {
-        console.log(this);
+    $(".open-modal").click(function(e) {
+        e.stopPropagation();
         var modalName = $(this).data('modal');
         openModal(modalName);
     })
