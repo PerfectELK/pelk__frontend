@@ -85,6 +85,20 @@
   }
 }
 
+
+.owl-item.active:not(.center){
+  .delete-block{
+    transform: scale(0.6);
+    .delete-block__wrapper{
+      .delete-item{
+        .svg-icon{
+          fill:rgba(211,177,177,0.5) !important;
+        }
+      }
+    }
+  }
+}
+
 .owl-item.center{
   //width: 400px!important;
   .slider__item-wrapper {

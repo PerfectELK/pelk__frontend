@@ -27,6 +27,9 @@
             border: none;
             background-color: #B90B4D;
             text-align: left;
+            &:nth-child(2){
+              text-align: center;
+            }
             &:first-child{
               padding-left: 3em;
             }
@@ -56,6 +59,10 @@
               position: relative;
               &:first-child{
                 padding-left: 2em;
+              }
+
+              &:nth-child(2){
+                text-align: center;
               }
 
               &:last-child{

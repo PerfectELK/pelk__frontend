@@ -6,6 +6,7 @@
                 @@for(var j = 0; j < head.length; j++){
                 <th>`+head[j]+`</th>
                 }
+                <th></th>
                 </thead>
                 <tbody>
                 @@for(var i = 0; i < 3; i++){
@@ -27,6 +28,11 @@
                                 12:45
                             </span>
                         </div>
+                    </td>
+                    <td>
+                        @@include("./../../inputs/button/change/change.html",{
+                        "data-modal" : "modal_timer-item__change"
+                        })
                     </td>
                 </tr>
                 }

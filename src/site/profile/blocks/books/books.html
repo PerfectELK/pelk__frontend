@@ -1,14 +1,18 @@
 <section class="category category-block category_hidden dn" data-category="books">
+    <div class="category__wrapper">
     @@include('../../../default/blocks/table/table.html',{
         "head" : [
         "Name",
         "Page",
-        "Mark as read"
-    ],
-        "body" : [
-        "python за час",
-        "2",
-        "Not read yet"
+        "Change/Mark as read"
     ]
     })
+    <div class="button-container">
+        @@include("./../../../default/blocks/inputs/button/default/button.html",{
+        "text" : "Add",
+        "addClass" : "b-h50 b-w100 open-modal",
+        "data_modal" : "modal_book-item__add"
+        })
+    </div>
+    </div>
 </section>

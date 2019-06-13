@@ -9,24 +9,15 @@
                 </thead>
                 <tbody>
                 <tr>
-                    @@for(var j = 0; j < body.length; j++){
-                        <td>`+body[j]+`</td>
-                    }
-                </tr>
-                <tr>
-                    @@for(var j = 0; j < body.length; j++){
-                        <td>`+body[j]+`</td>
-                    }
-                </tr>
-                <tr>
-                    @@for(var j = 0; j < body.length; j++){
-                        <td>`+body[j]+`</td>
-                    }
-                </tr>
-                <tr>
-                    @@for(var j = 0; j < body.length; j++){
-                        <td>`+body[j]+`</td>
-                    }
+                    <td>Python за 1 секунду</td>
+                    <td>0.1111</td>
+                    <td>
+                        @@include("./../inputs/button/change/change.html",{
+                            "data-modal" : "modal_book-item__change"
+                        })
+                        &nbsp;&nbsp;
+                        @@include("./../inputs/button/mark/mark.html")
+                    </td>
                 </tr>
                 </tbody>
             </table>

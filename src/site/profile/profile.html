@@ -3,3 +3,78 @@
 @@include('./blocks/books/books.html')
 @@include('./blocks/repository/repository.html')
 @@include('./blocks/hashGenerator/hashGenerator.html')
+
+@@include("./../default/blocks/modals/default/modal.html",{
+    "modal" : "modal_book-item__add",
+    "modal_name" : "Add book",
+    "action" : "book-item__add",
+    "inputs" : [
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Title",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Page",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/button/default/button.html",
+    "text" : "Add",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
+    ]
+})
+
+@@include("./../default/blocks/modals/default/modal.html",{
+    "modal" : "modal_book-item__change",
+    "modal_name" : "Change book",
+    "action" : "book-item__change",
+    "inputs" : [
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Title",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Page",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/button/default/button.html",
+    "text" : "Add",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
+    ]
+})
+
+@@include("./../default/blocks/modals/default/modal.html",{
+    "modal" : "modal_book-item__check",
+    "modal_name" : "Mark as read book",
+    "headClasses" : "tc",
+    "action" : "book-item__check",
+    "inputs" : [
+    {
+    "src" : "inputs/button/default/button.html",
+    "text" : "Mark",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
+    ]
+})

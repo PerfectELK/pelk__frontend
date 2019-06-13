@@ -28,6 +28,9 @@
             &:first-child{
               padding-left: 2em;
             }
+            &:last-child{
+              text-align: center;
+            }
 
           }
         }
@@ -58,6 +61,7 @@
                 }
               }
               &:last-child{
+                text-align: center;
                 &::before{
                   width:calc(100% - 2em);
                 }

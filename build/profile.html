@@ -110,6 +110,7 @@
 
 </main>
 <section class="category category-block category_hidden dn" data-category="books">
+    <div class="category__wrapper">
     <div class="table-block__wrapper">
     <div class="table-block">
         <div class="table__wrapper">
@@ -120,51 +121,45 @@
                 
                 <th>Page</th>
                 
-                <th>Mark as read</th>
+                <th>Change/Mark as read</th>
                 
                 </thead>
                 <tbody>
                 <tr>
-                    
-                        <td>python за час</td>
-                    
-                        <td>2</td>
-                    
-                        <td>Not read yet</td>
-                    
-                </tr>
-                <tr>
-                    
-                        <td>python за час</td>
-                    
-                        <td>2</td>
-                    
-                        <td>Not read yet</td>
-                    
-                </tr>
-                <tr>
-                    
-                        <td>python за час</td>
-                    
-                        <td>2</td>
-                    
-                        <td>Not read yet</td>
-                    
-                </tr>
-                <tr>
-                    
-                        <td>python за час</td>
-                    
-                        <td>2</td>
-                    
-                        <td>Not read yet</td>
-                    
+                    <td>Python за 1 секунду</td>
+                    <td>0.1111</td>
+                    <td>
+                        <div class="change-block">
+    <button class="change__btn open-modal" data-modal=modal_book-item__change>
+    <svg class="svg-icon">
+        <use xlink:href="/img/svg/sprite.svg#shuffle"></use>
+    </svg>
+    </button>
+</div>
+                        &nbsp;&nbsp;
+                        <div class="mark-block">
+    <button class="mark__btn open-modal" data-modal="modal_book-item__check">
+        <svg class="svg-icon">
+            <use xlink:href="/img/svg/sprite.svg#check-mark"></use>
+        </svg>
+    </button>
+</div>
+                    </td>
                 </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+    <div class="button-container">
+        <div class="submit-default b-h50 b-w100 open-modalContainer">
+    <button class="submit-default__item b-h50 b-w100 open-modal "    data-modal=modal_book-item__add >
+        Add
+    </button>
+</div>
+
+    </div>
+    </div>
 </section>
 <section class="category category-block category_hidden dn" data-category="repository">
     <div class="table-block__wrapper">
@@ -182,40 +177,25 @@
                 </thead>
                 <tbody>
                 <tr>
-                    
-                        <td>Статьи про веб</td>
-                    
-                        <td>Нужно прочитать</td>
-                    
-                        <td>Change/Delete icons</td>
-                    
-                </tr>
-                <tr>
-                    
-                        <td>Статьи про веб</td>
-                    
-                        <td>Нужно прочитать</td>
-                    
-                        <td>Change/Delete icons</td>
-                    
-                </tr>
-                <tr>
-                    
-                        <td>Статьи про веб</td>
-                    
-                        <td>Нужно прочитать</td>
-                    
-                        <td>Change/Delete icons</td>
-                    
-                </tr>
-                <tr>
-                    
-                        <td>Статьи про веб</td>
-                    
-                        <td>Нужно прочитать</td>
-                    
-                        <td>Change/Delete icons</td>
-                    
+                    <td>Python за 1 секунду</td>
+                    <td>0.1111</td>
+                    <td>
+                        <div class="change-block">
+    <button class="change__btn open-modal" data-modal=modal_book-item__change>
+    <svg class="svg-icon">
+        <use xlink:href="/img/svg/sprite.svg#shuffle"></use>
+    </svg>
+    </button>
+</div>
+                        &nbsp;&nbsp;
+                        <div class="mark-block">
+    <button class="mark__btn open-modal" data-modal="modal_book-item__check">
+        <svg class="svg-icon">
+            <use xlink:href="/img/svg/sprite.svg#check-mark"></use>
+        </svg>
+    </button>
+</div>
+                    </td>
                 </tr>
                 </tbody>
             </table>
@@ -226,6 +206,117 @@
 <section class="category category-block category_hidden dn" data-category="hash">
 
 </section>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<div class="container">
+    <div class="modal-overlay modal_book-item__add-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal_book-item__add modal js-blur">
+            <button class="close-modal">×</button>
+            <h2 class=@@headClasses>Add book</h2>
+            <div class="modal-input-container">
+                <form class="form__validation" action=book-item__add method="get">
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type=text class="input-text__item validate[required]" placeholder=Title>
+    </div>
+</div>
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type=text class="input-text__item validate[required]" placeholder=Page>
+    </div>
+</div>
+                
+                    <div class="submit-default button-center">
+    <button class="submit-default__item button-center mt1 " >
+        Add
+    </button>
+</div>
+
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<div class="container">
+    <div class="modal-overlay modal_book-item__change-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal_book-item__change modal js-blur">
+            <button class="close-modal">×</button>
+            <h2 class=@@headClasses>Change book</h2>
+            <div class="modal-input-container">
+                <form class="form__validation" action=book-item__change method="get">
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type=text class="input-text__item validate[required]" placeholder=Title>
+    </div>
+</div>
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type=text class="input-text__item validate[required]" placeholder=Page>
+    </div>
+</div>
+                
+                    <div class="submit-default button-center">
+    <button class="submit-default__item button-center mt1 " >
+        Add
+    </button>
+</div>
+
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<div class="container">
+    <div class="modal-overlay modal_book-item__check-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal_book-item__check modal js-blur">
+            <button class="close-modal">×</button>
+            <h2 class=tc>Mark as read book</h2>
+            <div class="modal-input-container">
+                <form class="form__validation" action=book-item__check method="get">
+                
+                    <div class="submit-default button-center">
+    <button class="submit-default__item button-center mt1 " >
+        Mark
+    </button>
+</div>
+
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 <script src="/js/bundle.min.js"></script>
 </html>

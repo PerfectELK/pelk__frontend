@@ -1,6 +1,8 @@
 <main class="timers-main">
     <div class="add-item">
-        @@include("./../default/blocks/plus/default/plus.html")
+        @@include("./../default/blocks/plus/default/plus.html",{
+            "data_modal" : "modal_timer__add"
+        })
     </div>
     @@include("./blocks/slide/slide.html")
 </main>
@@ -50,6 +52,28 @@
 })
 
 @@include("./../default/blocks/modals/default/modal.html",{
+    "modal" : "modal_timer__change",
+    "modal_name" : "Change item",
+    "action" : "timer-item__change",
+    "inputs" : [
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Name",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required] "
+    },
+    {
+    "src" : "inputs/button/default/button.html",
+    "text" : "Change",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
+    ]
+})
+
+@@include("./../default/blocks/modals/default/modal.html",{
     "modal" : "modal_timer-item__change",
     "modal_name" : "Change item",
     "action" : "timer-item__change",
@@ -87,16 +111,39 @@
     ]
 })
 
-    @@include("./../default/blocks/modals/default/modal.html",{
+@@include("./../default/blocks/modals/default/modal.html",{
     "modal" : "modal_timer__delete",
-    "modal_name" : "Delete timer",
+    "modal_name" : "Delete timer?",
     "action" : "timer-delete",
+    "headClasses" : "tc",
     "inputs" : [
     {
     "src" : "inputs/button/default/button.html",
-    "text" : "Delete",
+    "text" : "Yes",
     "addClass" : "button-center mt1",
     "addClassContainer" : "button-center"
     }
     ]
-});
+})
+
+@@include("./../default/blocks/modals/default/modal.html",{
+"modal" : "modal_timer__add",
+"modal_name" : "Add timer",
+"action" : "timer-add",
+"inputs" : [
+{
+"src" : "inputs/text/default/input.html",
+"placeholder" : "Name",
+"addClass" : "input-left mt1",
+"addClassContainer" : "w50",
+"type" : "text",
+"validateCls" : "validate[required] "
+},
+{
+"src" : "inputs/button/default/button.html",
+"text" : "Add",
+"addClass" : "button-center mt1",
+"addClassContainer" : "button-center"
+}
+]
+})
