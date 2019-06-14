@@ -4,9 +4,21 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 1em;
-    button{
+    .submit-default{
       &:last-child{
-        margin-left: 2em;
+        button{
+          margin-left: .5em;
+        }
+      }
+      &:first-child{
+        button{
+          margin-right: .5em;
+        }
+      }
+      button{
+        @media screen and (max-width: 340px){
+          width: 140px!important;
+        }
       }
     }
   }
