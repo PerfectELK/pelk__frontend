@@ -1,0 +1,20 @@
+<div class="category-item-block">
+    <div class="category-item-block__wrapper">
+        <div class="form-container">
+            <form action="">
+                @@include('./../../default/blocks/inputs/text/default/input.html',{
+                    "type" : "text",
+                    "placeholder" : "Title"
+                })
+                @@include('./../../default/blocks/inputs/quil/quil.html')
+            </form>
+        </div>
+        @@include('./../../default/blocks/table/category_item-table/table.html',{
+            "head" : [
+            "Title",
+            "Description",
+            ""
+        ]
+        })
+    </div>
+</div>

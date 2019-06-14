@@ -1,0 +1,9 @@
+.category-item-block {
+  margin-top: 2em;
+  .category-item-block__wrapper {
+    .form-container {
+      width: calc(100vw - 20%);
+      margin: 0 auto;
+    }
+  }
+}
