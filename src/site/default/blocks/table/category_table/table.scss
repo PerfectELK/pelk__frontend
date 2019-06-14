@@ -1,0 +1,86 @@
+.repository_table-block__wrapper{
+  .repository_table-block{
+    display: flex;
+    justify-content: center;
+    .repository_table__wrapper{
+      display: block;
+      overflow-x: auto;
+      width: calc(100vw - 20%);
+      @media screen and(max-width: 450px){
+        width: calc(100% - 5%);
+      }
+      .table{
+        width: 100%;
+        max-width: 100%;
+        min-width: 500px;
+        table-layout : fixed;
+        border-collapse: collapse;
+        thead{
+          th{
+            min-height: 40px;
+            height: 59px;
+            color:#D3B1B1;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            border: none;
+            background-color: #B90B4D;
+            text-align: left;
+            &:first-child{
+              padding-left: 2em;
+            }
+            &:last-child{
+              text-align: center;
+            }
+
+          }
+        }
+        tbody{
+          background-color: #C4C4C4;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 20px;
+          color:#3F1429;
+          tr{
+            min-height: 95px;
+            height: 95px;
+            &:last-child{
+              td{
+                &::before{
+                  content: none;
+                }
+              }
+            }
+            //border-bottom: 1px solid #000000;
+            td{
+              position: relative;
+              &:first-child{
+                padding-left: 2em;
+                &::before{
+                  width:calc(100% - 2em);
+                  right: 0;
+                  left: auto!important;
+                }
+              }
+              &:last-child{
+                text-align: center;
+                &::before{
+                  width:calc(100% - 2em);
+                }
+              }
+              &::before{
+                content: "";
+                position: absolute;
+                display: block;
+                left: 0;
+                bottom: 0;
+                height: 1.5px;
+                width:100%;
+                background-color: #000;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

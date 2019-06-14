@@ -40,6 +40,35 @@ button{
   padding: 0;
   margin: 0;
 }
+.link__wrapper{
+  position: relative;
+  display: inline-block;
+  .link{
+    transition: all 0.5s ease;
+    position: relative;
+    box-sizing: border-box;
+    max-width: 200px;
+    &.link_black{
+      color:#000;
+
+    }
+    &:hover{
+
+    }
+    &:hover:after,
+    &:focus:after {
+      width: 100%;
+    }
+    &:after{
+      display: block;
+      content: "";
+      height: 2px;
+      width: 0%;
+      background-color: #000000;
+      transition: width .3s ease-in-out;
+    }
+  }
+}
 
 
 @import "fonts";

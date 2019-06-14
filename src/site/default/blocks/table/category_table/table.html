@@ -1,0 +1,28 @@
+<div class="repository_table-block__wrapper">
+    <div class="repository_table-block">
+        <div class="repository_table__wrapper">
+            <table class="table table_responsive">
+                <thead>
+                @@for(var j = 0; j < head.length; j++){
+                <th>`+head[j]+`</th>
+                }
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span class="link__wrapper"><a class="link link_black" href="/category_item.html">Статьи про статьи</a></span></td>
+                    <td>Статьи статьевские надо почитать</td>
+                    <td>
+                        @@include("./../../inputs/button/change/change.html",{
+                        "data-modal" : "modal_category-item__change"
+                        })
+                        &nbsp;&nbsp;
+                        @@include("./../../inputs/button/remove/remove.html",{
+                        "data-modal" : "modal_category-item__remove"
+                        })
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

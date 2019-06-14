@@ -23,10 +23,10 @@
             <div class="menu-block__wrapper">
                 <ul class="menu-list">
                     <li class="menu-list__item"><a href="/profile.html">Profile</a></li>
-                    <li class="menu-list__item"><a href="javascript:void(0)">To do</a></li>
-                    <li class="menu-list__item"><a href="javascript:void(0)">Plan</a></li>
+                    <li class="menu-list__item"><a href="/to-do.html">To do</a></li>
+                    <li class="menu-list__item"><a href="/plan.html">Plan</a></li>
                     <li class="menu-list__item"><a href="/timers.html">Timer</a></li>
-                    <li class="menu-list__item menu-list__item_logout"><a href="javascript:void(0)">Logout</a></li>
+                    <li class="menu-list__item menu-list__item_logout"><a href="/">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -87,7 +87,7 @@
             <use xlink:href="./img/svg/sprite.svg#two-links"></use>
         </svg>
     </div>
-    <h3 class="tc">BOOK</h3>
+    <h3 class="tc">REPOSITORY</h3>
 </div>
 
                     
@@ -97,7 +97,7 @@
             <use xlink:href="./img/svg/sprite.svg#two-links"></use>
         </svg>
     </div>
-    <h3 class="tc">BOOK</h3>
+    <h3 class="tc">REPOSITORY</h3>
 </div>
 
                     
@@ -162,9 +162,10 @@
     </div>
 </section>
 <section class="category category-block category_hidden dn" data-category="repository">
-    <div class="table-block__wrapper">
-    <div class="table-block">
-        <div class="table__wrapper">
+    <div class="category__wrapper">
+    <div class="repository_table-block__wrapper">
+    <div class="repository_table-block">
+        <div class="repository_table__wrapper">
             <table class="table table_responsive">
                 <thead>
                 
@@ -177,21 +178,21 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td>Python за 1 секунду</td>
-                    <td>0.1111</td>
+                    <td><span class="link__wrapper"><a class="link link_black" href="/category_item.html">Статьи про статьи</a></span></td>
+                    <td>Статьи статьевские надо почитать</td>
                     <td>
                         <div class="change-block">
-    <button class="change__btn open-modal" data-modal=modal_book-item__change>
+    <button class="change__btn open-modal" data-modal=modal_category-item__change>
     <svg class="svg-icon">
         <use xlink:href="/img/svg/sprite.svg#shuffle"></use>
     </svg>
     </button>
 </div>
                         &nbsp;&nbsp;
-                        <div class="mark-block">
-    <button class="mark__btn open-modal" data-modal="modal_book-item__check">
+                        <div class="remove-block">
+    <button class="remove__btn open-modal" data-modal=modal_category-item__remove>
         <svg class="svg-icon">
-            <use xlink:href="/img/svg/sprite.svg#check-mark"></use>
+            <use xlink:href="/img/svg/sprite.svg#remove"></use>
         </svg>
     </button>
 </div>
@@ -202,6 +203,15 @@
         </div>
     </div>
 </div>
+        <div class="button-container">
+            <div class="submit-default b-h50 b-w100 open-modalContainer">
+    <button class="submit-default__item b-h50 b-w100 open-modal "    data-modal=modal_category-item__add >
+        Add
+    </button>
+</div>
+
+        </div>
+    </div>
 </section>
 <section class="category category-block category_hidden dn" data-category="hash">
 
@@ -279,6 +289,118 @@
                     <div class="submit-default button-center">
     <button class="submit-default__item button-center mt1 " >
         Add
+    </button>
+</div>
+
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<div class="container">
+    <div class="modal-overlay modal_category-item__change-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal_category-item__change modal js-blur">
+            <button class="close-modal">×</button>
+            <h2 class=@@headClasses>Change category</h2>
+            <div class="modal-input-container">
+                <form class="form__validation" action=category-item__change method="get">
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type=text class="input-text__item validate[required]" placeholder=Title>
+    </div>
+</div>
+                
+                    <div class="input-container w50">
+    <div class="input-textarea input-left mt1">
+        <textarea class="input-textarea__item validate[required]" placeholder=Description rows="10"></textarea>
+    </div>
+</div>
+                
+                    <div class="submit-default button-center">
+    <button class="submit-default__item button-center mt1 " >
+        Change
+    </button>
+</div>
+
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<div class="container">
+    <div class="modal-overlay modal_category-item__add-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal_category-item__add modal js-blur">
+            <button class="close-modal">×</button>
+            <h2 class=@@headClasses>Add category</h2>
+            <div class="modal-input-container">
+                <form class="form__validation" action=category-item__add method="get">
+                
+                    <div class="input-container w50">
+    <div class="input-text input-left mt1">
+        <input type=text class="input-text__item validate[required]" placeholder=Title>
+    </div>
+</div>
+                
+                    <div class="input-container w50">
+    <div class="input-textarea input-left mt1">
+        <textarea class="input-textarea__item validate[required]" placeholder=Description rows="10"></textarea>
+    </div>
+</div>
+                
+                    <div class="submit-default button-center">
+    <button class="submit-default__item button-center mt1 " >
+        Change
+    </button>
+</div>
+
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<div class="container">
+    <div class="modal-overlay modal_category-item__remove-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal_category-item__remove modal js-blur">
+            <button class="close-modal">×</button>
+            <h2 class=tc>Remove category?</h2>
+            <div class="modal-input-container">
+                <form class="form__validation" action=category-item__remove method="get">
+                
+                    <div class="submit-default button-center">
+    <button class="submit-default__item button-center mt1 " >
+        Yes
     </button>
 </div>
 

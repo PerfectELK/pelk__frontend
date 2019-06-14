@@ -64,6 +64,82 @@
     ]
 })
 
+
+@@include("./../default/blocks/modals/default/modal.html",{
+    "modal" : "modal_category-item__change",
+    "modal_name" : "Change category",
+    "action" : "category-item__change",
+    "inputs" : [
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Title",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/textarea/default/textarea.html",
+    "placeholder" : "Description",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/button/default/button.html",
+    "text" : "Change",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
+    ]
+})
+
+@@include("./../default/blocks/modals/default/modal.html",{
+    "modal" : "modal_category-item__add",
+    "modal_name" : "Add category",
+    "action" : "category-item__add",
+    "inputs" : [
+    {
+    "src" : "inputs/text/default/input.html",
+    "placeholder" : "Title",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/textarea/default/textarea.html",
+    "placeholder" : "Description",
+    "addClass" : "input-left mt1",
+    "addClassContainer" : "w50",
+    "type" : "text",
+    "validateCls" : "validate[required]"
+    },
+    {
+    "src" : "inputs/button/default/button.html",
+    "text" : "Change",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
+    ]
+})
+
+@@include("./../default/blocks/modals/default/modal.html",{
+    "modal" : "modal_category-item__remove",
+    "modal_name" : "Remove category?",
+    "headClasses" : "tc",
+    "action" : "category-item__remove",
+    "inputs" : [
+    {
+    "src" : "inputs/button/default/button.html",
+    "text" : "Yes",
+    "addClass" : "button-center mt1",
+    "addClassContainer" : "button-center"
+    }
+    ]
+})
+
 @@include("./../default/blocks/modals/default/modal.html",{
     "modal" : "modal_book-item__check",
     "modal_name" : "Mark as read book",

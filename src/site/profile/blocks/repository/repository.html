@@ -1,5 +1,6 @@
 <section class="category category-block category_hidden dn" data-category="repository">
-    @@include('../../../default/blocks/table/table.html',{
+    <div class="category__wrapper">
+    @@include('../../../default/blocks/table/category_table/table.html',{
     "head" : [
     "Name",
     "Description",
@@ -11,4 +12,12 @@
     "Change/Delete icons"
     ]
     })
+        <div class="button-container">
+            @@include("./../../../default/blocks/inputs/button/default/button.html",{
+            "text" : "Add",
+            "addClass" : "b-h50 b-w100 open-modal",
+            "data_modal" : "modal_category-item__add"
+            })
+        </div>
+    </div>
 </section>
