@@ -1,13 +1,17 @@
 .html-input-container{
   max-width: 500px;
-  min-height: 100px;
+  max-height: 300px;
+  overflow-y: auto;
+
   position: relative;
   .html-input-container__wrapper{
-    position: absolute;
     width: 100%;
     height: auto;
     top:0;
     left: 0;
     background-color: #C4C4C4;
+    .html-input-item{
+      height: 200px;
+    }
   }
 }

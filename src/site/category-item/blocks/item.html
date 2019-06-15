@@ -4,9 +4,12 @@
             <form action="">
                 @@include('./../../default/blocks/inputs/text/default/input.html',{
                     "type" : "text",
-                    "placeholder" : "Title"
+                    "placeholder" : "Title",
+                    "addClassContainer" : "mw500"
                 })
-                @@include('./../../default/blocks/inputs/quil/quil.html')
+                @@include('./../../default/blocks/inputs/quil/quil.html',{
+                    "addClassContainer" : "mt1"
+                })
             </form>
         </div>
         @@include('./../../default/blocks/table/category_item-table/table.html',{

@@ -11489,10 +11489,26 @@
 });
 
 
-(function(){
+(function($){
 
-    var editors = new Quill('.html-input-item',{
-        theme: 'snow'
-    })
+    var editors = $('.html-input-item');
 
-}());
+    for(var i = 0; i < editors.length; i++){
+        var container = editors.get(i);
+
+        var editor = new Quill(container,{
+            theme: 'snow'
+        })
+
+        editor.on('text-change',function(delta, oldDelta, source){
+           var text = editor.getContents();
+           console.log(container.firstChild.innerHTML);
+        });
+
+    }
+
+
+}(jQuery));
+
+
+
