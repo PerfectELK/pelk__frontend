@@ -3480,10 +3480,11 @@ function initCarousel(){
                 items:3
             },
             1200:{
-                items:5
+                items:($('.slider__item').length > 3) ? 5 : 3
             }
         };
     }
+
     try{
         var conf__items = JSON.parse(owl.data('config'));
     }catch (e) {
@@ -3497,7 +3498,7 @@ function initCarousel(){
 
     var config = {
         nav:(conf__items.nav != undefined) ? conf__items.nav : true,
-        loop:(conf__items.loop != undefined) ? conf__items.loop : true,
+        //loop:(conf__items.loop != undefined) ? conf__items.loop : true,
         responsive:responsive,
         center:(conf__items.center != undefined) ? conf__items.center : true,
         navElement:(conf__items.navElement != undefined) ? conf__items.navElement : "slider__arrow__wrapper",
@@ -3531,10 +3532,6 @@ $(document).on('click','.owl-item', function(e){
                 }
             }
             prevent__num = num;
-        }
-        if(responsive[index].items <= 3 && $('.owl-item.active').length < 5 && $('.owl-item:not(.cloned)').length >= 5){
-            console.log('kek');
-            n = getNumber(current, n);
         }
         owl.trigger('to.owl.carousel',[n]);
     }else if($(this).hasClass('center')){
@@ -3691,7 +3688,8 @@ function closeCategory(categoryName){
 }
 
 initCarousel();
-
+var owl_item = $('.owl-item');
+owl.trigger('to.owl.carousel',[parseInt(owl_item.length / 2)]);
 
 
 $('.owl-prev').find('span').html('');

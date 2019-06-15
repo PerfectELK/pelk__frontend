@@ -25,6 +25,29 @@ html, body {
   max-width:500px;
 }
 
+.db{
+  display: block!important;
+}
+.dib{
+  display: inline-block;
+  width: inherit;
+}
+
+.jcr{
+  justify-content: flex-end;
+}
+
+.tr{
+  text-align: right!important;
+}
+.w100{
+  width: 100%;
+}
+
+.tl{
+  text-align: left;
+}
+
 .tc{
   text-align: center;
 }

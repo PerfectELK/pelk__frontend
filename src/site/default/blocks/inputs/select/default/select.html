@@ -1,0 +1,10 @@
+<div class="input-container @@addClassContainer">
+    <div class="input-select @@addClass">
+        <select  class="picture-select input-select__item @@validateCls" placeholder=@@placeholder >
+            <option disabled selected value="0">@@name</option>
+            @@for(var i = 0; i < options.length; i++){
+            <option value="`+ options[i].val +`">`+ options[i].title +`</option>
+            }
+        </select>
+    </div>
+</div>

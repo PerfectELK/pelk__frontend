@@ -1,10 +1,37 @@
 .category-item-block {
   margin-top: 2em;
   .category-item-block__wrapper {
+    @media screen and(max-width: 890px) {
+      margin-top: 9em;
+    }
     .form-container {
       width: calc(100vw - 20%);
       margin: 2em auto;
-
+      max-height: 500px;
+      transform: scaleY(1);
+      transform-origin: 50% 0;
+      transition: all 0.5s ease;
+      &.hide{
+        transform: scaleY(0);
+        //height: 70px;
+        max-height: 70px;
+        @media screen and(max-width: 890px) {
+          max-height: 0;
+        }
+        //overflow: hidden;
+      }
+      .form-item{
+        max-width: 500px;
+        @media screen and(max-width: 890px) {
+          max-width: 100%;
+          .input-container{
+            max-width: 100%!important;
+          }
+          .html-input-container{
+            max-width: 100% !important;
+          }
+        }
+      }
     }
   }
 }

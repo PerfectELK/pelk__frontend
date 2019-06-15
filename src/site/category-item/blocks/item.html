@@ -1,15 +1,29 @@
 <div class="category-item-block">
-    <div class="category-item-block__wrapper">
-        <div class="form-container">
-            <form action="">
+    <div class="add-item">
+        @@include("./../../default/blocks/plus/default/plus.html",{
+            "data_open" : "form-container"
+        })
+    </div>
+    <div class="category-item-block__wrapper ">
+        <div class="form-container tr hide">
+            <form class="form__validation form-item dib tl" action="" enctype="multipart/form-data">
                 @@include('./../../default/blocks/inputs/text/default/input.html',{
                     "type" : "text",
                     "placeholder" : "Title",
-                    "addClassContainer" : "mw500"
+                    "addClassContainer" : "mw500",
+                    "validateCls" : "validate[required]"
                 })
                 @@include('./../../default/blocks/inputs/quil/quil.html',{
                     "addClassContainer" : "mt1"
                 })
+
+                @@include('./../../default/blocks/inputs/file/default/file.html',{
+                    "addClass" : "mt1 jcr tr"
+                })
+                @@include('./../../default/blocks/inputs/button/default/button.html',{
+                    "text" : "Add",
+                    "addClassContainer" : "mt1 db tr"
+                 })
             </form>
         </div>
         @@include('./../../default/blocks/table/category_item-table/table.html',{

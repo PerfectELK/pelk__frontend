@@ -1,6 +1,6 @@
 <div class="plus-block">
     <div class="plus-block__wrapper">
-        <div class="plus-block__elem open-modal" data-modal=@@data_modal>
+        <div class="plus-block__elem @@if(context.data_modal){ open-modal}" @@if(context.data_open){ data-open=@@data_open } @@if(context.data_modal){ data-modal=@@data_modal }>
             <svg class="svg-icon">
                 <use xlink:href="/img/svg/sprite.svg#plus"></use>
             </svg>

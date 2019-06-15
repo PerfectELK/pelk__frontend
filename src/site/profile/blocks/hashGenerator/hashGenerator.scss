@@ -1,0 +1,15 @@
+.hash-generator{
+  padding-left: 2em;
+  padding-right: 2em;
+  display: flex;
+  justify-content: center;
+  .form-container{
+    max-width: 500px;
+    min-height: 600px;
+    .form-item{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+    }
+  }
+}

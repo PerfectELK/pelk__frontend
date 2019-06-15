@@ -1605,7 +1605,3 @@ var msBeautify = msBeautify || {};
 
 var selects = $(".picture-select");
 selects.msDropDown();
-
-selects.change(function(){
-    console.log($(this));
-})

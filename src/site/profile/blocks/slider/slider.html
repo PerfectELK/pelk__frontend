@@ -5,19 +5,28 @@
                 <div class="slider__wrapper">
                 <div class="slider owl-slider owl-theme" data-config='["{\"nav\": true, \"loop\": true, \"center\": true, \"dots\": false, \"autoWidth\": false, \"navElement\" : \"slider__arrow__wrapper\" }"]'>
 
-                    @@for(var i = 0; i < 3; i++){
+                    @@for(var i = 0; i < 1; i++){
                     @@include('./slider__item/slider__item.html',{
-                            "icon" : "keepass",
-                            "text" : "BOOK",
-                            "category" : "books",
-                            "activated" : " Profile"
+                    "icon" : "book",
+                    "text" : "BOOK",
+                    "category" : "books",
+                    "activated" : " Profile"
                     })
                     }
 
-                    @@for(var i = 0; i < 2; i++){
+                    @@for(var i = 0; i < 1; i++){
                     @@include('./slider__item/slider__item.html',{
-                    "icon" : "two-links",
+                    "icon" : "news",
                     "text" : "REPOSITORY",
+                    "category" : "repository",
+                    "activated" : "Profile"
+                    })
+                    }
+
+                    @@for(var i = 0; i < 1; i++){
+                    @@include('./slider__item/slider__item.html',{
+                    "icon" : "password",
+                    "text" : "STRING GENERATOR",
                     "category" : "repository",
                     "activated" : "Profile"
                     })

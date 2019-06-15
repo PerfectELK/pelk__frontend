@@ -1,3 +1,30 @@
-<section class="category category-block category_hidden dn" data-category="hash">
+<section class="category category-block  " data-category="hash">
+    <div class="category__wrapper">
+        <div class="hash-generator">
 
+            <div class="form-container">
+                <div class="form-item">
+                    @@include('./../../../default/blocks/inputs/select/default/select.html',{
+                        "name" : "Тип кодирования",
+                        "addClassContainer" : "w100",
+                        "options" : [
+                        {
+                            "title" : "Random string",
+                            "val" : "str"
+                        },
+                        {
+                            "title" : "MD 5",
+                            "val" : "md5"
+                        },
+                        {
+                            "title" : "SHA256",
+                            "val" : "sha256"
+                        }
+                        ]
+                    })
+                </div>
+            </div>
+
+        </div>
+    </div>
 </section>

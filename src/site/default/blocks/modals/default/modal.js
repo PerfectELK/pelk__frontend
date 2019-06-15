@@ -167,4 +167,4 @@ $(document).ready(function() {
 
     $modal.initBlur(0.5);
 
-})
+});
