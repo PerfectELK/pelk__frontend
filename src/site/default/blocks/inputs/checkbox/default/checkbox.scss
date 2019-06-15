@@ -1,0 +1,12 @@
+.input-container{
+  .input-checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .input-checkbox__item{
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

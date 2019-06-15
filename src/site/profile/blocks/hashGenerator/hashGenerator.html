@@ -5,22 +5,56 @@
             <div class="form-container">
                 <div class="form-item">
                     @@include('./../../../default/blocks/inputs/select/default/select.html',{
-                        "name" : "Тип кодирования",
-                        "addClassContainer" : "w100",
+                        "name" : "HASH TYPE",
+                        "addClassContainer" : "mw500 w100",
+                        "picture" : "/img/temp/timer/hash.png",
                         "options" : [
                         {
-                            "title" : "Random string",
-                            "val" : "str"
+                            "title" : "RANDOM STRING",
+                            "val" : "str",
+                            "picture" : "/img/temp/timer/hash.png"
                         },
                         {
                             "title" : "MD 5",
-                            "val" : "md5"
+                            "val" : "md5",
+                            "picture" : "/img/temp/timer/hash.png"
                         },
                         {
                             "title" : "SHA256",
-                            "val" : "sha256"
+                            "val" : "sha256",
+                            "picture" : "/img/temp/timer/hash.png"
                         }
                         ]
+                    })
+
+                    <div class="random-str__wrapper mw500 w100">
+                        @@include('./../../../default/blocks/inputs/checkbox/default/checkbox.html',{
+                            "name" : "with char",
+                            "id" : "with_char"
+                        })
+                        @@include('./../../../default/blocks/inputs/checkbox/default/checkbox.html',{
+                            "name" : "with numbers",
+                            "id" : "with_numbers"
+                        })
+                    </div>
+
+                    @@include('./../../../default/blocks/inputs/textarea/default/textarea.html',{
+                    "placeholder" : "Text",
+                    "addClass" : "input-left mt1",
+                    "addClassContainer" : "mw500 w100",
+                    "type" : "text"
+                    })
+
+                    @@include('./../../../default/blocks/inputs/button/default/button.html',{
+                    "text" : "Generate",
+                    "addClassContainer" : "mt1 db tr"
+                    })
+
+                    @@include('./../../../default/blocks/inputs/textarea/default/textarea.html',{
+                    "placeholder" : "Output",
+                    "addClass" : "input-left mt1",
+                    "addClassContainer" : "mw500 w100",
+                    "type" : "text"
                     })
                 </div>
             </div>

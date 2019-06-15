@@ -201,21 +201,55 @@
 
             <div class="form-container">
                 <div class="form-item">
-                    <div class="input-container w100">
+                    <div class="input-container mw500 w100">
     <div class="input-select @@addClass">
         <select  class="picture-select input-select__item @@validateCls" placeholder=@@placeholder >
-            <option disabled selected value="0">Тип кодирования</option>
+            <option disabled selected value="0" title=/img/temp/timer/hash.png >HASH TYPE</option>
             
-            <option value="str">Random string</option>
+            <option value="str" title="/img/temp/timer/hash.png">RANDOM STRING</option>
             
-            <option value="md5">MD 5</option>
+            <option value="md5" title="/img/temp/timer/hash.png">MD 5</option>
             
-            <option value="sha256">SHA256</option>
+            <option value="sha256" title="/img/temp/timer/hash.png">SHA256</option>
             
         </select>
     </div>
 </div>
 
+
+                    <div class="random-str__wrapper mw500 w100">
+                        <div class="input-container @@addClassContainer">
+    <div class="input-checkbox @@addClass">
+        <label class="input-checkbox__label" for=with_char>with char</label>
+        <input type="checkbox" class="input-checkbox__item @@validateCls" id=with_char placeholder=@@placeholder>
+    </div>
+</div>
+                        <div class="input-container @@addClassContainer">
+    <div class="input-checkbox @@addClass">
+        <label class="input-checkbox__label" for=with_numbers>with numbers</label>
+        <input type="checkbox" class="input-checkbox__item @@validateCls" id=with_numbers placeholder=@@placeholder>
+    </div>
+</div>
+                    </div>
+
+                    <div class="input-container mw500 w100">
+    <div class="input-textarea input-left mt1">
+        <textarea class="input-textarea__item @@validateCls" placeholder=Text rows="10"></textarea>
+    </div>
+</div>
+
+                    <div class="submit-default mt1 db tr">
+    <button class="submit-default__item @@addClass " >
+        Generate
+    </button>
+</div>
+
+
+                    <div class="input-container mw500 w100">
+    <div class="input-textarea input-left mt1">
+        <textarea class="input-textarea__item @@validateCls" placeholder=Output rows="10"></textarea>
+    </div>
+</div>
                 </div>
             </div>
 
