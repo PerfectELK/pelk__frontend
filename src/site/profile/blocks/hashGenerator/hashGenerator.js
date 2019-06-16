@@ -5991,12 +5991,32 @@ var hashGenerator = function(obj){
 
     this.__p = obj.data('form');
     this.select_type = obj.find(`select[name=${this.__p}__select-type]`);
+    this.input__textarea = obj.find(`textarea[name=${this.__p}__input_textarea]`);
+    this.output__textarea = obj.find(`textarea[name=${this.__p}__output_textarea]`);
+    this.submit = obj.find(`button[name=${this.__p}__submit]`);
     this.hashContainer = obj.find('.hash-input__wrapper');
     this.strContainer = obj.find('.random-str__wrapper');
 
-    this.select_type.on('change',() => {
+
+    this.with_char = obj.find(`input[name=${this.__p}__with_char]`);
+    this.with_numbers = obj.find(`input[name=${this.__p}__with_numbers]`);
+    this.range = obj.find(`input[name=${this.__p}__range]`);
+
+    this.select_type.on('change', () => {
         this.checkSelect();
-    })
+    });
+
+    this.submit.on('click',() => {
+        let __func = this.select_type.val();
+        try{
+            this[__func]();
+        }catch (e) {
+            let hash = CryptoJS[__func](this.input__textarea.val()).toString();
+            this.output__textarea.val(hash);
+            console.log(hash);
+        }
+
+    });
 
     this.init = function(){
         this.checkSelect();
@@ -6010,19 +6030,66 @@ var hashGenerator = function(obj){
         obj.removeClass('hide');
     }
 
+
+    this.common__mode = function(){
+        this.input__textarea.attr('placeholder','Input');
+        this.output__textarea.attr('placeholder','Output');
+        this.submit.html('Generate');
+    }
+
+    this.transliterate__mode = function(){
+        this.input__textarea.attr('placeholder','Russian');
+        this.output__textarea.attr('placeholder','English');
+        this.submit.html('Transliterate');
+    }
+
+    this.transliterate__checked = function(){
+        this.hide(this.strContainer);
+        this.show(this.hashContainer);
+        this.transliterate__mode();
+    }
+
+    this.transliterate = function(){
+
+    }
+
+
+    this.str = function(){
+
+        let result  = '';
+        let symbols = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        let numbers = '0123456789';
+        let characters = '!@#$%^&*{}\":><.,/\\;][`~№%\'';
+        if(this.with_char.prop('checked')){
+            symbols += characters;
+        }
+        if(this.with_numbers.prop('checked')){
+            symbols += numbers;
+        }
+
+        var symbolsLength = symbols.length;
+        var length = parseInt(this.range.val());
+
+        for ( var i = 0; i < length; i++ ) {
+            result += symbols.charAt(Math.floor(Math.random() * symbolsLength));
+        }
+        this.output__textarea.val(result);
+
+    }
+
     this.checkSelect = function(){
         let val = this.select_type.val();
         if(val === "transliterate"){
-            this.hide(this.strContainer);
-            this.hide(this.hashContainer);
+            this.transliterate__checked();
 
         }else if(val in CryptoJS){
             this.hide(this.strContainer);
             this.show(this.hashContainer);
-
+            this.common__mode();
         }else{
             this.show(this.strContainer);
             this.hide(this.hashContainer);
+            this.common__mode();
         }
     }
 
