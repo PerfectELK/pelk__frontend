@@ -1,9 +1,9 @@
 <div class="input-container @@addClassContainer">
     <div class="input-select @@addClass">
-        <select  class="picture-select input-select__item @@validateCls" placeholder=@@placeholder >
-            <option disabled selected value="0" title=@@picture >@@name</option>
+        <select  class="picture-select input-select__item @@validateCls" name=@@nameAtr placeholder=@@placeholder >
+            <option disabled value="0" title=@@picture >@@name</option>
             @@for(var i = 0; i < options.length; i++){
-            <option value="`+ options[i].val +`" title="`+ options[i].picture +`">`+ options[i].title +`</option>
+            <option @@if(context.selected){  selected  }  value="`+ options[i].val +`" title="`+ options[i].picture +`">`+ options[i].title +`</option>
             }
         </select>
     </div>

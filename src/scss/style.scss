@@ -10,6 +10,19 @@ body{
 
 
 
+.without__hide{
+  transform: scaleY(1);
+  max-height: 2000px;
+  transition: all 0.5s ease;
+  transform-origin: 50% 0;
+  &.hide {
+    transform: scaleY(0);
+    max-height: 0px;
+  }
+}
+
+
+
 html, body {
   height: 100%;
   margin: 0;
@@ -50,6 +63,10 @@ html, body {
 }
 .ddcommon{
   width: 100% !important;
+}
+.ddChild{
+  height: auto!important;
+  overflow: auto!important;
 }
 .ddTitle{
   height: 100%!important;

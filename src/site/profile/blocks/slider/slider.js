@@ -3545,9 +3545,6 @@ $(document).on('click','.owl-item', function(e){
 })
 
 
-function open__or__closeTimer(item){
-    console.log('kek');
-}
 
 function open__or__closeProfile(item){
 

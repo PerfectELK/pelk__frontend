@@ -1,57 +1,77 @@
-<section class="category category-block  " data-category="hash">
+<section class="category category-block  category_hidden dn" data-category="hash">
     <div class="category__wrapper">
         <div class="hash-generator">
 
             <div class="form-container">
-                <div class="form-item">
+                <div class="form-item pelk__form" data-form="hashGenerator">
                     @@include('./../../../default/blocks/inputs/select/default/select.html',{
                         "name" : "HASH TYPE",
+                        "nameAtr" : "hashGenerator__select-type",
                         "addClassContainer" : "mw500 w100",
                         "picture" : "/img/temp/timer/hash.png",
                         "options" : [
                         {
                             "title" : "RANDOM STRING",
                             "val" : "str",
-                            "picture" : "/img/temp/timer/hash.png"
+                            "picture" : "/img/temp/timer/hash.png",
+                            "selected" : false
+                        },
+                        {
+                            "title" : "TRANSLITERATE",
+                            "val" : "transliterate",
+                            "picture" : "/img/temp/timer/hash.png",
+                            "selected" : false
                         },
                         {
                             "title" : "MD 5",
-                            "val" : "md5",
-                            "picture" : "/img/temp/timer/hash.png"
+                            "val" : "MD5",
+                            "picture" : "/img/temp/timer/hash.png",
+                            "selected" : true
                         },
                         {
                             "title" : "SHA256",
-                            "val" : "sha256",
-                            "picture" : "/img/temp/timer/hash.png"
+                            "val" : "SHA256",
+                            "picture" : "/img/temp/timer/hash.png",
+                            "selected" : false
                         }
                         ]
                     })
 
-                    <div class="random-str__wrapper mw500 w100">
+                    <div class="random-str__wrapper mw500 w100 without__hide">
+                        @@include('./../../../default/blocks/inputs/range/default/range.html',{
+                            "nameAtr" : "hashGenerator__range"
+                        })
                         @@include('./../../../default/blocks/inputs/checkbox/default/checkbox.html',{
                             "name" : "with char",
+                            "nameAtr" : "hashGenerator__with_char",
                             "id" : "with_char"
                         })
                         @@include('./../../../default/blocks/inputs/checkbox/default/checkbox.html',{
                             "name" : "with numbers",
+                            "nameAtr" : "hashGenerator__with numbers",
                             "id" : "with_numbers"
                         })
                     </div>
+                    <div class="hash-input__wrapper mw500 without__hide hide w100">
+                        @@include('./../../../default/blocks/inputs/textarea/default/textarea.html',{
+                        "placeholder" : "Text",
+                        "nameAtr" : "hashGenerator__input_textarea",
+                        "addClass" : "input-left mt1",
+                        "addClassContainer" : "mw500 w100",
+                        "type" : "text"
+                        })
+                    </div>
 
-                    @@include('./../../../default/blocks/inputs/textarea/default/textarea.html',{
-                    "placeholder" : "Text",
-                    "addClass" : "input-left mt1",
-                    "addClassContainer" : "mw500 w100",
-                    "type" : "text"
-                    })
 
                     @@include('./../../../default/blocks/inputs/button/default/button.html',{
                     "text" : "Generate",
+                    "nameAtr" : "hashGenerator__submit",
                     "addClassContainer" : "mt1 db tr"
                     })
 
                     @@include('./../../../default/blocks/inputs/textarea/default/textarea.html',{
                     "placeholder" : "Output",
+                    "nameAtr" : "hashGenerator__output_textarea",
                     "addClass" : "input-left mt1",
                     "addClassContainer" : "mw500 w100",
                     "type" : "text"

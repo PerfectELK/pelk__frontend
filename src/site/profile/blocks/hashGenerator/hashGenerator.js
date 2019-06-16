@@ -5986,3 +5986,46 @@
     return CryptoJS;
 
 }));
+
+var hashGenerator = function(obj){
+
+    this.__p = obj.data('form');
+    this.select_type = obj.find(`select[name=${this.__p}__select-type]`);
+    this.hashContainer = obj.find('.hash-input__wrapper');
+    this.strContainer = obj.find('.random-str__wrapper');
+
+    this.select_type.on('change',() => {
+        this.checkSelect();
+    })
+
+    this.init = function(){
+        this.checkSelect();
+    }
+
+    this.hide = function(obj){
+        obj.addClass('hide');
+    }
+
+    this.show = function(obj){
+        obj.removeClass('hide');
+    }
+
+    this.checkSelect = function(){
+        let val = this.select_type.val();
+        if(val === "transliterate"){
+            this.hide(this.strContainer);
+            this.hide(this.hashContainer);
+
+        }else if(val in CryptoJS){
+            this.hide(this.strContainer);
+            this.show(this.hashContainer);
+
+        }else{
+            this.show(this.strContainer);
+            this.hide(this.hashContainer);
+        }
+    }
+
+    this.init();
+
+};

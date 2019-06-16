@@ -58,7 +58,7 @@
             <form class="form__validation form-item dib tl" action="" enctype="multipart/form-data">
                 <div class="input-container mw500">
     <div class="input-text @@addClass">
-        <input type=text class="input-text__item validate[required]" placeholder=Title>
+        <input type=text name=@@nameAtr class="input-text__item validate[required]" placeholder=Title>
     </div>
 </div>
                 <div class="html-input-container mt1">
@@ -72,11 +72,11 @@
                 <div class="input-container mt1 jcr trContainer">
     <div class="input-file mt1 jcr tr">
         <label class="input-file__label" for="file">File</label>
-        <input id="file" type="file" class="input-file__item @@validateCls" placeholder=@@placeholder>
+        <input id="file" type="file" name=@@nameAtr class="input-file__item @@validateCls" placeholder=@@placeholder>
     </div>
 </div>
                 <div class="submit-default mt1 db tr">
-    <button class="submit-default__item @@addClass " >
+    <button class="submit-default__item @@addClass " name=@@nameAtr >
         Add
     </button>
 </div>
