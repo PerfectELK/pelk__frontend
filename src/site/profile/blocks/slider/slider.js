@@ -3685,6 +3685,7 @@ function closeCategory(categoryName){
 }
 
 initCarousel();
+$('.slider-block').addClass('scale__normal');
 var owl_item = $('.owl-item');
 owl.trigger('to.owl.carousel',[parseInt(owl_item.length / 2)]);
 

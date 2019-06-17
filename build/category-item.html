@@ -102,7 +102,7 @@
                     <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores aspernatur commodi cumque earum et hic id libero nesciunt nihil, nulla quisquam repellat rerum sequi voluptatum. Alias, amet, at atque cupiditate dicta ex expedita explicabo illum impedit natus officiis reiciendis tempora tenetur, veritatis voluptatum? A deserunt hic sapiente vel voluptates. Ad autem beatae blanditiis consectetur cumque deserunt distinctio, doloribus eaque est eveniet ex facere impedit in ipsam, modi nesciunt, nobis omnis placeat repellat repellendus repudiandae rerum saepe sit velit vero vitae voluptas voluptatum. Accusamus beatae commodi consequatur, doloremque facilis magni nemo nesciunt obcaecati porro sapiente sed ullam veritatis voluptate? Sed.</td>
                     <td>
                         <div class="change-block">
-    <button class="change__btn open-modal" data-modal=modal_category-item__change>
+    <button class="change__btn open-modal" data-modal=@@data-modal>
     <svg class="svg-icon">
         <use xlink:href="/img/svg/sprite.svg#shuffle"></use>
     </svg>
@@ -110,7 +110,7 @@
 </div>
                         &nbsp;&nbsp;
                         <div class="remove-block">
-    <button class="remove__btn open-modal" data-modal=modal_category-item__remove>
+    <button class="remove__btn open-modal" data-modal=modal_category-item-table__remove>
         <svg class="svg-icon">
             <use xlink:href="/img/svg/sprite.svg#remove"></use>
         </svg>
@@ -125,6 +125,37 @@
 </div>
     </div>
 </div>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+    <defs>
+        <filter id="blur">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+        </filter>
+    </defs>
+</svg>
+<div class="container">
+    <div class="modal-overlay modal_category-item-table__remove-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal_category-item-table__remove modal js-blur">
+            <button class="close-modal">×</button>
+            <h2 class=tc>Remove item?</h2>
+            <div class="modal-input-container">
+                <form class="form__validation" action=category-item-table__remove method="get">
+                
+                    <div class="submit-default button-center">
+    <button class="submit-default__item button-center mt1 " name=@@nameAtr >
+        Yes
+    </button>
+</div>
+
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 <script src="/js/bundle.min.js"></script>
 </html>

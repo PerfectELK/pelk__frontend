@@ -1,4 +1,21 @@
 @@include('./default/blocks/header/head.html')
 @@include('./default/blocks/nav/nav.html')
 @@include('./category-item/blocks/item.html')
+
+
+@@include("./default/blocks/modals/default/modal.html",{
+"modal" : "modal_category-item-table__remove",
+"modal_name" : "Remove item?",
+"headClasses" : "tc",
+"action" : "category-item-table__remove",
+"inputs" : [
+{
+"src" : "inputs/button/default/button.html",
+"text" : "Yes",
+"addClass" : "button-center mt1",
+"addClassContainer" : "button-center"
+}
+]
+})
+
 @@include('./default/blocks/footer/footer.html')

@@ -120,6 +120,18 @@ button{
     }
   }
 }
+.modal-overlay{
+  z-index: 1000;
+}
+.modal-wrapper{
+  z-index: 1010;
+}
 
+.slider-block{
+  transform: scaleY(0);
+  &.scale__normal{
+    transform: scaleY(1)!important;
+  }
+}
 
 @import "fonts";
