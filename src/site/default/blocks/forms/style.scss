@@ -37,19 +37,23 @@
   border: 1px solid #999;
   display: none;
 }
-
+.undefinedformError{
+  .formErrorContent{
+    font-size: 20px!important;
+  }
+}
 .formError .formErrorContent {
   width: 100%;
-  background: #C4C4;
+  background: #B90B4D;
   position:relative;
-  color: #fff;
+  color: #ffffff;
   min-width: 170px;
   font-size: 15px;
-  border: 2px solid #C4C4;
-  box-shadow: 0 0 6px #C4C4;
-  -moz-box-shadow: 0 0 6px #C4C4;
-  -webkit-box-shadow: 0 0 6px #C4C4;
-  -o-box-shadow: 0 0 6px #C4C4;
+  border: 2px solid;
+  box-shadow: 0 0 6px;
+  -moz-box-shadow: 0 0 6px;
+  -webkit-box-shadow: 0 0 6px;
+  -o-box-shadow: 0 0 6px;
   padding: 4px 10px 4px 10px;
   border-radius: 6px;
   -moz-border-radius: 6px;
